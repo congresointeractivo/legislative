@@ -5,7 +5,7 @@ es:
   layout:
     about_us: Acerca de nosotros
     bills: Proyectos de ley
-    communication: Pregúntales
+    communication: Preguntales
     congressmen: Congresistas
     disclosure: Declaraciones
     from: Monitor Parlamentario
@@ -17,13 +17,13 @@ es:
     title_project: Congreso Interactivo
     welcome: Bienvenido(a)
   main:
-    search_placeholder: Ingresa un proyecto de ley o congresista
+    search_placeholder: Ingresa un proyecto de ley o legislador
     username: Nombre de usuario
     password: Contraseña
     stay_signed: Mantenerme conectado
     login: Ingresar
     registry: Crear una cuenta
-    forgot: Olvidaste tu clave?
+    forgot: ¿Olvidaste tu clave?
     latest_tables: Últimas tablas
     latest_bills: Últimos proyectos de ley
     view_more: Ver más
@@ -33,8 +33,8 @@ es:
     yes: Sí
     no: No
     abstentions: Abstenciones
-    title_slogan: Bienvenido a tu congreso online
-    title_subslogan: Entra sin pedir permiso
+    title_slogan: Bienvenidos a nuestro Congreso online
+    title_subslogan: Entrá sin pedir permiso
     filter_bills: Proyectos de ley
     filter_congressmen: Congresistas
     discussion_agendas: Tablas de discusión

@@ -1,4 +1,4 @@
-/* Place all the styles related to the Main controller here.
+	/* Place all the styles related to the Main controller here.
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
@@ -11,6 +11,7 @@ body {
   color: #67675a;
   margin-bottom: 70px;
   margin-top: 114px;
+font-size: 14px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,6 +20,10 @@ body {
   background-color: white;
   border-color: transparent;
   border-bottom: 2px solid #F47A14;
+}
+
+.navbar-toggle {
+	background-color: #21759b;
 }
 
 .navbar-toggle .text-bar {
@@ -322,8 +327,10 @@ label {
 }
 
 #site-logo #defci {
-  text-align: center;
+  text-align: right;
+  width: 217px;
   color: #555;
+  font-size: 10px
 }
 
 #beta {
@@ -346,12 +353,36 @@ label {
   color: #c4b7c4;
 }
 
+
+.navbar-inverse .navbar-nav>li {
+	margin-top: 1em;	
+	font-size: 20px;
+	border-left: 1px dotted #bbb;
+	padding-right: 0.25em;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .navbar-inverse .navbar-nav {
+    margin-left: 4px;
+  }
+  .navbar-inverse .navbar-nav>li {  
+	font-size: 14px;
+  }
+}
+
+
+.navbar-inverse .navbar-nav>li:first-child {
+border: none;
+}
+
 .navbar-inverse .navbar-nav>li>a {
-  color: #B99EAF;
+  color: #1C1C1C;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-  color: #E6E6C9;
+  color: #EA6E0B;
 }
 
 .breadcrumb {
@@ -846,9 +877,6 @@ h4 span.nostyle {
 @media (min-width: 768px) {
   .modal-lg {
     width: 700px;
-  }
-  #site-logo #defci {
-    text-align: right;
   }
   .hero-space-bill {
     padding: 20px 0px;
