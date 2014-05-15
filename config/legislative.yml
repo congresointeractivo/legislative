@@ -53,7 +53,7 @@ development:
   twitter_tags: 'CongresoAbierto'  # twitter tags
   twitter_account:  'ciudadanoi'   # twitter account
   keywords: ~ 
-  agendas_url:      ~   # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
+  agendas_url:      ~ # example: 'https://api.morph.io/owner/agenda_repo/data.json?query='
   district_weeks_url: ~ # example: 'https://api.morph.io/owner/district_weeks_repo/data.json?query='
   congressmen_helper_url: ~ # example: 'https://api.morph.io/owner/congressmen_helper/data.json?query='
   morph_io_api_key: ~       # for use morph.io API
