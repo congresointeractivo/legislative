@@ -1,18 +1,14 @@
 # Localization file for Spanish. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-es:
+es-AR:
   layout:
     about_us: Acerca de nosotros
     bills: Proyectos de ley
     communication: Preguntales
     congressmen: Congresistas
     disclosure: Declaraciones
-<<<<<<< HEAD
     from: Monitor Parlamentario
-=======
-    from: 'de Ciudadano Inteligente'
->>>>>>> 227e4b6f8c10a4790a230866345e796b1ec2f99b
     glossary: Glosario
     home: Portada
     menu: Menú
