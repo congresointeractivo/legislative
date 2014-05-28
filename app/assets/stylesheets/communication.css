@@ -34,7 +34,6 @@
 }
 
 .form-comunication .chosen-container-multi .chosen-choices {
-  background-color: #3E1F3E!important;
   background-image: none;
   border: 2px solid #6B506A;
   height: 50px;
@@ -68,20 +67,8 @@
 .input-group-addon {
   color: #A6A691;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #f9f9eb;
+  border: 2px solid #CCC;
   border-radius: 0;
-}
-
-.form-comunication .chosen-results {
-  background-color: #3E1F3E !important;
-}
-
-.form-comunication .chosen-drop {
-  background-color: #3E1F3E !important;
-}
-
-.form-comunication .chosen-choices{
-  background-color: #3E1F3E !important;
 }
 
 .hero-space form {
@@ -89,20 +76,9 @@
   margin: 30px auto 0;
 }
 
-.hero-space .form-control {
-  border: 2px solid #664165;
-}
-
-.hero-space .form-control::-webkit-input-placeholder { /* WebKit browsers */
-    color: #774F76;
-}
-.hero-space .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #774F76;
-}
-.hero-space .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #774F76;
-}
-
+.hero-space .form-control::-webkit-input-placeholder, /* WebKit browsers */
+.hero-space .form-control:-moz-placeholder, /* Mozilla Firefox 4 to 18 */
+.hero-space .form-control::-moz-placeholder, /* Mozilla Firefox 19+ */
 .hero-space .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #774F76;
 }
@@ -114,25 +90,15 @@
 .form-control {
   background-color: rgba(255, 255, 255, 0);
   background-image: none;
-  border: 2px solid #f9f9eb;
+  border: 2px solid #CCC;
   border-radius: 0px;
   box-shadow: none;
   color: #67675a;
 }
 
-.form-control::-webkit-input-placeholder {
-    font-family: 'Lato', sans-serif;
-    color: #A6A691;
-}
-.form-control:-moz-placeholder {
-    font-family: 'Lato', sans-serif;
-    color: #A6A691;
-}
-.form-control::-moz-placeholder {
-    font-family: 'Lato', sans-serif;
-    color: #A6A691;
-}
-
+.form-control::-webkit-input-placeholder,
+.form-control:-moz-placeholder,
+.form-control::-moz-placeholder,
 .form-control:-ms-input-placeholder {
     font-family: 'Lato', sans-serif;
     color: #A6A691;
@@ -163,15 +129,12 @@
   padding: 10px;
 }
 
-.message-box-right .form-control::-webkit-input-placeholder {
-  color: #E6E6C9;
-  font-family: 'Lato', sans-serif; 
-}
-
+.message-box-right .form-control::-webkit-input-placeholder,
 .message-box-right .form-control:-moz-placeholder {
   color: #E6E6C9;
   font-family: 'Lato', sans-serif; 
 }
+
 
 .questions {
   background-color: #67675A;
@@ -198,12 +161,11 @@
 .chosen-container-multi .chosen-choices {
   background-image: none;
   background-color: #FFF !important;
+  border: 2px solid #CCC;
 }
 
 .search-field input.default{
   height: 35px !important;
-  background-color: #3E1F3E;
-  border: none!important;
   color: #A6A691!important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset!important;
   padding-left: 12px!important;
@@ -216,14 +178,10 @@
 }
 
 .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
-  font-family: 'lato', sans-serif !important;
-  color: #E0DFC4;
-  background-color: #3E1F3E;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 .chosen-container .chosen-results li.no-results {
-    background: none;
-    background-color: #3E1F3E!important;
     display: list-item;
 }
 
@@ -242,7 +200,6 @@ ts {
 }
 
 .chosen-choices ul{
-  background-color: #3E1F3E !important;
   width: 200px;
   border: none;
 }
@@ -258,9 +215,8 @@ ts {
 }
 
 .default{
-  background-color: #3E1F3E !important; 
   color: #E6E6C9!important;
-  border: 1px solid #6B506A;
+  border: none;
 }
 
 .panel-default .panel-heading {
@@ -270,9 +226,6 @@ ts {
 
 .page-header {
     border-bottom: none;
-  }
-.panel-body {
-  background-color: #E6E6C9;
 }
 
 .destacadoPregunta {
