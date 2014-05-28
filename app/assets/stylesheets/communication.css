@@ -142,10 +142,6 @@
   background-color: #ffffff;
 }
 
-.form-comunication .form-control {
-  border: 2px solid #6B506A;
-}
-
 .form-comunication .input-group-addon {
   border-left: none;
   color: #6B506A;
@@ -160,7 +156,6 @@
   padding: 0;
 }
 .message-box-right {
-  background-color: #462445;
   padding: 10px;
 }
 

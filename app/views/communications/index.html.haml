@@ -11,7 +11,7 @@
       = t('layout.communication')
 
   %section#communication
-    %div.panel.panel-default
+    %div.panel
       %div.form-comunication.panel-body
       - if !ENV['component_writeit']
         = image_tag('pronto-preguntales.png')
@@ -19,7 +19,7 @@
       - else
         = form_tag  :method => 'POST' do
           = field_set_tag do
-            %div.row{'style'=>'background-color:#3E1F3E'}
+            %div.row
               %div.col-md-3.message-box-left
                 %div.form-group
                   %h5
