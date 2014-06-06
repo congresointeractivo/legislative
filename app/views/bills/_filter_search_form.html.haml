@@ -41,20 +41,6 @@
           %option{:value => chamber, selected: params[:initial_chamber] == chamber}= chamber
 
   %div.form-group
-    = label_tag :current_priority, t('search.current_priority')
-    %select{:name => "current_priority[]", :class => "form-control chosen", :multiple => "multiple", :'data-placeholder' => t('search.placeholder_priority'), :onfocus => "ga('send','bills_filters','focus_priority')"}
-      %option{:value => "", selected: params[:current_priority] == ""}
-      - @priorities = Billit::Bill.class_variable_get(:@@current_priority_valid_values)
-      - if @priorities != nil
-        - @priorities.each do |priority|
-          - if !params[:current_priority].blank?
-            - params[:current_priority].each do |priority_in_param|
-              - if priority_in_param == priority
-                %option{:value => priority, selected: "selected"}= priority
-          - else
-            %option{:value => priority}= priority
-
-  %div.form-group
     = label_tag :creation_date_min, t('search.creation_date_min')
     - if params[:creation_date_min] == nil
       - params[:creation_date_min] = ENV['parliaments_initial_date']
