@@ -10,7 +10,7 @@
 body {
   color: #67675a;
   margin-bottom: 70px;
-  margin-top: 114px;
+  /*margin-top: 114px;*/
 font-size: 14px !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,7 +18,7 @@ font-size: 14px !important;
 
 .navbar-inverse {
   background-color: white;
-  border-color: transparent;
+  border: none;
   border-bottom: 2px solid #F47A14;
 }
 

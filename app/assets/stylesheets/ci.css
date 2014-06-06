@@ -1,7 +1,19 @@
+/* ---- header disclaimer ---- */
+.disclaimer {
+  background-color: #D0021B;
+  color: #FFF;
+  padding: 5px;
+}
+.disclaimer p {
+  margin-bottom: 0;
+}
+
 .panel {
   box-shadow: none;
   border: none;
 }
+
+
 
 /* ---- form ---- */
 .chosen-container-multi .chosen-choices {
