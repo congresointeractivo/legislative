@@ -2,6 +2,14 @@
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
+
+.billid {
+  word-break: break-all;
+  display: block;
+  width: 100%;
+  font-size: 11px;
+}
+
 .hero-space-bill {
   padding: 20px 0px 15px;
   margin-top: -15px;
