@@ -2,10 +2,16 @@
  * They will automatically be included in application.css.
  * You can use Sass (SCSS) here: http://sass-lang.com */
 
+
+.billid {
+  word-break: break-all;
+  display: block;
+  width: 100%;
+  font-size: 11px;
+}
+
 .hero-space-bill {
   padding: 20px 0px 15px;
-  background: #462445;
-  color: #e6e6c9;
   margin-top: -15px;
 }
 
@@ -24,8 +30,6 @@
 
 .hero-space-bill .ui-widget-content {
   background: rgba(255, 255, 255, 0);
-  color: #e6e6c9;
-  border: 2px solid #6B506A;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;

@@ -5,8 +5,8 @@ es-AR:
   layout:
     about_us: Acerca de nosotros
     bills: Proyectos de ley
-    communication: Preguntales
-    congressmen: Congresistas
+    communication: Preguntas
+    congressmen: Legisladores
     disclosure: Declaraciones
     from: Monitor Parlamentario
     glossary: Glosario
@@ -64,13 +64,13 @@ es-AR:
     all_the_chambers: Todas las cámaras
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
-    bulletin: 'Boletín'
-    placeholder_bulletin: Ingresa nro de boletín
+    bulletin: 'Expediente'
+    placeholder_bulletin: Ingresa nro de expediente
     stage: 'Etapa'
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
-    creation_date_min: 'Fecha de ingreso (min)'
-    creation_date_max: 'Fecha de ingreso (max)'
+    creation_date_min: 'Fecha de ingreso (desde)'
+    creation_date_max: 'Fecha de ingreso (hasta)'
     initial_chamber: 'Cámara de origen'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
@@ -223,7 +223,7 @@ es-AR:
     email: E-mail
     choose_congressmen: Seleccione un senador o diputado
     writte_message: Redacta tu mensaje
-    subject: Título del mensaje
+    subject: Asunto
     message: Contenido del mensaje
     send: Enviar
     list_messages: Mensajes enviados
@@ -240,13 +240,13 @@ es-AR:
     form_keyword: Palabra clave
     form_chamber: Cámara
     form_name: Nombre
-    form_zone: Zona
-    form_party: Partido
+    form_zone: Distrito
+    form_party: 'Bloque (Partido político)'
     placeholder_keyword: 'Nombre, comuna o región'
-    placeholder_name: Seleccione un congresista
-    placeholder_zone: Ingrese una comuna o región
-    placeholder_party: Seleccione un partido político
-    askthem: Pregúntales
+    placeholder_name: 'Seleccione un legislador'
+    placeholder_zone: 'Ingrese una provincia'
+    placeholder_party: 'Seleccione un bloque'
+    askthem: Preguntas
     district: 'Distrito: '
     region: 'Región: '
     comuna: 'Comuna: '

@@ -86,6 +86,7 @@ es-GT:
     found_results: Se encontraron %s resultados
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
+    predefined_queries: Consultas predefinidas
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara
@@ -141,6 +142,7 @@ es-GT:
     breadcrumb_bill: Proyectos de ley
     download_project: Descargar proyecto de ley
     title: Proyectos de ley
+    bill_dont_exist: El proyecto de ley al que intentas acceder no existe
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
@@ -347,3 +349,7 @@ es-GT:
       month: Mes
       second: Segundos
       year: Año
+  config:
+    bills_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong> para el consumo de Proyectos de Ley'
+    popit_url: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>billit_url</strong>, <strong>popit_url</strong>, <strong>popit_persons</strong>, <strong>popit_search</strong>, <strong>popit_organizations</strong> y/o <strong>popit_organizations_search</strong> para el consumo de Congresistas'
+    search: 'Hemos detectado que tu archivo de configuración no cuenta con una URL válida para <strong>popit_persons</strong>, <strong>popit_organizations</strong>, <strong>billit_url</strong> y/o <strong>popit_search</strong> para poder realizar búsquedas correctamente'

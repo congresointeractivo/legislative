@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- meta for windows -->
-    <meta name="application-name" content="Congreso Abierto"/>
+    <meta name="application-name" content="<%= Legislative::Application.config.application_name %>"/>
     <meta name="msapplication-TileColor" content="#3e1f3e"/>
     <meta name="msapplication-square70x70logo" content="<%= asset_path('tiny.png') %>"/>
     <meta name="msapplication-square150x150logo" content="<%= asset_path('square.png') %>"/>
@@ -39,24 +39,25 @@
     <!-- end meta for fullscreen -->
 
     <%= stylesheet_link_tag 'application' %>
-    <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
-    <%= stylesheet_link_tag "http://cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" %>
-    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' %>
-    <%= stylesheet_link_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
-    <%= stylesheet_link_tag 'http://cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css' %>
+    <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
+    <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:400,700' %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:400,700' %>
+    <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
+    <%= stylesheet_link_tag '//cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css' %>
 
     <%= favicon_link_tag 'http://www.congresointeractivo.org/favicon.ico' %>
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"><\/script>')</script>
 
     <!-- scripts concatenated and minified via build script -->
     <!-- Latest compiled and minified JavaScript -->
-    <%= javascript_include_tag 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
+    <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
     <%= javascript_include_tag 'application.js' %>
-    <%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
-    <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js' %>
-    <%= javascript_include_tag 'http://cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
+    <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
+    <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js' %>
+    <%= javascript_include_tag '//cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
     <!-- end scripts -->
 
     <style type="text/css">
@@ -70,8 +71,17 @@
 </head>
 <body>
 
-  <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="//browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="disclaimer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p><b>Nota de la versión beta:</b> Temporalmente la información está incompleta y no se recomienda utilizarla para realizar análisis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -90,7 +100,7 @@
           <li><%= link_to t('layout.bills'), searches_bills_path %><li/>
           <li><%= link_to t('layout.congressmen'), congressmen_path %><li/>
           <li><%= link_to t('layout.communication'), communications_path %><li/>
-          <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
+          <!-- <li><%= link_to t('layout.glossary'), glossaries_path %><li/> -->
         </ul>
         <% if current_user %>
         <ul class="nav navbar-nav navbar-right">
@@ -124,19 +134,15 @@
             </ul>
         </div>
 	<div class="col-md-4" style="text-align: right; margin-bottom: 1em;"><strong>Argentina</strong></div>
-<div class="panel panel-warning	" style="margin: 1em 10% 1em 10%; text-align: center; font-size: 1.2em">
-<div class="panel-heading">Nota de la versión beta:</div>
-<div class="panel-body">Temporalmente la información está incompleta y no se recomienda utilizarla para realizar análisis.</div>
-</div>
       </div>
     </div>
   </div>
   <!-- End footer -->
 
   <!-- User feedback by freshdesk -->
-  <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
+  <script type="text/javascript" src="//assets.freshdesk.com/widget/freshwidget.js"></script>
   <script type="text/javascript">
-    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "http://congresointeractivo.freshdesk.com"} );
+    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "//congresointeractivo.freshdesk.com"} );
   </script>
   <!-- End user feedback by freshdesk -->
 
@@ -158,5 +164,26 @@
     })
   </script>
   <!-- End Google Analytics -->
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.congresointeractivo.org"]);
+  _paq.push(["setDomains", ["*.congresointeractivo.org"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://www.clinica-web.com.ar/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 6]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="http://www.clinica-web.com.ar/piwik/piwik.php?idsite=6" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
 </body>
 </html>
