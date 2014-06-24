@@ -22,8 +22,9 @@ class CongressmenController < ApplicationController
       @congressmen = PopitPersonCollection.new
       @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
       @congressmen.persons.sort! { |x,y| x.name <=> y.name }
-
+	
       @organizations = get_organizations
+      @organizations.to_s
     end
   end
 
@@ -110,7 +111,7 @@ class CongressmenController < ApplicationController
     organizations = Popit::OrganizationCollection.new
     organizations.get ENV['popit_organizations'], 'application/json'
     organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
-    return organizations.uniq!(&:name)
+    return organizations; # organizations.uniq!(&:name)
   end
 
   # GET authors from congressmen helper in morph.io
