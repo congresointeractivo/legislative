@@ -61,10 +61,14 @@
               = t('bill.initial_chamber') + ":"
             = @bill.initial_chamber
             %br/
-          -if !@bill.current_priority.blank?
+          -if !@bill.subject_areas.blank?
             %span.light
-              = t('bill.current_priority') + ":"
-            = @bill.current_priority
+              = t('bill.subject_areas') + ":"
+            - @bill.subject_areas.each_with_index do | subject, index |
+              %span.subject_area
+                = subject
+                - if index < @bill.subject_areas.size - 1
+                  = ', '
             %br/
           -if !@bill.stage.blank?
             %span.light
