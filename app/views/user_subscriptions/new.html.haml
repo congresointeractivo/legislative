@@ -2,5 +2,7 @@
   .col-md-offset-4.col-md-4
     %h2
       = t('user_subscriptions.subscribe')
+    %p.intro
+      = t('user_subscriptions.subscription_intro')
     %hr
       = render :partial => "form", :locals => {:user => @user }
