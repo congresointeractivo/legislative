@@ -24,7 +24,7 @@ class SearchesController < ApplicationController
       end
 
       @organizations = Popit::OrganizationCollection.new
-      @organizations.get ENV['popit_organizations'], 'application/json'
+      @organizations.get ENV['popit_organizations']+'?per_page=100', 'application/json'
 
       @congressmen = PopitPersonCollection.new
 

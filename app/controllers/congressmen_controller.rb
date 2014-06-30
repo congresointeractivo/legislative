@@ -114,7 +114,7 @@ class CongressmenController < ApplicationController
   # GET organizations from Popit
   def get_organizations
     organizations = Popit::OrganizationCollection.new
-    organizations.get ENV['popit_organizations'], 'application/json'
+    organizations.get ENV['popit_organizations']+'?per_page=100', 'application/json'
     organizations = organizations.result.sort! { |x,y| x.name <=> y.name }
     return organizations; # organizations.uniq!(&:name)
   end
