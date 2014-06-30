@@ -220,6 +220,7 @@ es:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbete
     email: Correo Electrónico
+    subscription_intro: Suscríbete a las actualizaciones de este proyecto
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Nombre

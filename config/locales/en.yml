@@ -220,6 +220,7 @@ en:
     verified_mail: Your email was successfully verified
     subscribe: Subscribe
     email: Email
+    subscription_intro: Subscribe to updates of this bill
   communication:
     intro: 'A través de esta sección podrás tener línea directa con los congresistas, recuerda ser respetuoso.'
     name: Name

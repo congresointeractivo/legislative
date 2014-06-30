@@ -29,14 +29,14 @@ es-AR:
     view_more: Ver más
     senator_highlights: Senador destacado
     option_votes: Opciones
-    nro_votes: Nro. votos
+    nro_votes: Número votos
     yes: Sí
     no: No
     abstentions: Abstenciones
     title_slogan: Bienvenidos a nuestro Congreso online
     title_subslogan: Entrá sin pedir permiso
     filter_bills: Proyectos de ley
-    filter_congressmen: Congresistas
+    filter_congressmen: Legisladores
     discussion_agendas: Tablas de discusión
     high_chamber: Senado
     low_chamber: Cámara de diputados
@@ -65,7 +65,7 @@ es-AR:
     quick: Vista rápida
     placeholder_search_for: Ingresa una palabra clave
     bulletin: 'Expediente'
-    placeholder_bulletin: Ingresa nro de expediente
+    placeholder_bulletin: Ingresa número de expediente
     stage: 'Etapa'
     creation_date: 'Fecha de ingreso: '
     initiative: 'Iniciativa: '
@@ -79,7 +79,7 @@ es-AR:
     event_range: rango de eventos
     bills_advanced_search: Ver todos los resultados
     congressmen_advanced_search: Ver todos los resultados
-    congressmen: Congresistas
+    congressmen: Legisladores
     represent: 'Lugar que representa:'
     all_results: Ver todos los resultados
     search_results: Resultados de búsqueda
@@ -108,7 +108,7 @@ es-AR:
     resulting_document: Ley
     law_link: Enlace a la ley
     merged_bills: Refundido
-    subject_areas: Materias
+    subject_areas: Comisiones (temáticas)
     authors: Autores
     paperworks: Eventos
     priorities: Urgencias
@@ -133,13 +133,13 @@ es-AR:
     modal_documents: Oficios
     modal_directives: Indicaciones
     modal_revision: Comparados
-    bill_subscribe: Suscríbete
-    subscribe: Suscríbete a este proyecto
+    bill_subscribe: Suscríbase
+    subscribe: Suscríbase a este proyecto
     fb_share: Comparte
     tw_share: Twittea
     tw_text: Revisa el boletín %s en congresoabierto.gt
     breadcrumb_bill: Proyectos de ley
-    download_project: Descargar proyecto de ley
+    download_project: Ver texto completo
     title: Proyectos de ley
   paperwork:
     chamber: 'Cámara:'
@@ -214,10 +214,11 @@ es-AR:
     users: Usuarios
   user_subscriptions:
     confirmation_mail_sent: Se ha enviado un correo electrónico a la casilla registrada
-    already_subscribe: Ya existe una suscripción a este bill con ese correo electrónico
+    already_subscribe: Ya existe una suscripción a este proyecto con ese correo electrónico
     verified_mail: El correo electrónico fue exitosamente verificado
-    subscribe: Suscríbete
+    subscribe: Suscríbase
     email: Correo Electrónico
+    subscription_intro: 'Suscripción a los movimientos de un proyecto. Recibirá en su email una notificación cada vez que ocurra una novedad en este proyecto (dictámen, votación, etc). Nota: Durate la fase beta es posible que esta funcionalidad esté demorada o no funcione correctamente.'
   communication:
     name: Nombre
     email: E-mail
@@ -231,11 +232,11 @@ es-AR:
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
   congressmen:
     home: Portada
-    breadcrumb: Congresistas
-    fb_share: Comparte
-    tw_share: Twittea
-    title: Congresistas
-    title_search: Búsqueda de Congresistas
+    breadcrumb: Legisladores
+    fb_share: Comparta
+    tw_share: Twittee
+    title: Legisladores
+    title_search: Búsqueda de legisladores
     represent: 'Representa:'
     form_keyword: Palabra clave
     form_chamber: Cámara
@@ -265,7 +266,7 @@ es-AR:
     birth_date: 'Fecha nacimiento: '
     years: '%s (%s años)'
   email:
-    subject: 'Congreso abierto, confirmación de suscripción'
+    subject: 'Congreso Interactivo, confirmación de suscripción'
     body_header: 'Bienvenido a Congreso abierto, %s'
     body_content: 'Para confirmar tu suscripción al Proyecto de ley %s haz click '
     body_footer: 'Atte el equipo de Congreso abierto'
@@ -274,7 +275,7 @@ es-AR:
     bills: proyectos
     bills_search: busquedas_de_proyectos
     communications: comunicaciones
-    congressmen: congresistas
+    congressmen: legisladores
     disclosures: declaraciones
     glossaries: glosarios
     searches: busquedas
