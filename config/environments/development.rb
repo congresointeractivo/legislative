@@ -41,10 +41,15 @@ Legislative::Application.configure do
 
   config.eager_load = false
 
-  # Send mails to Cuttlefish (see http://cuttlefish.io)
+  # Send congreso interactivo mails to Cuttlefish (see http://cuttlefish.io)
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "localhost",
+    :address => "50.116.29.205",
     :port => 2525,
-  }
+    :user_name => "congreso_interactivo_2",
+    :password => "pnmTy0PpU0HA7EO6a6N8",
+    :authentication => :plain
+   }
+
+
 end
