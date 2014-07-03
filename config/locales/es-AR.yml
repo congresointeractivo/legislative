@@ -141,6 +141,12 @@ es-AR:
     breadcrumb_bill: Proyectos de ley
     download_project: Ver texto completo
     title: Proyectos de ley
+    incidence:
+      title: Incidencia
+      intro: Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación.
+      current_stage: 'Etapa actual:'
+      incidence_recommendation: 'Recomendaciones de incidencia:'
+      see_all: Ver todas
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'

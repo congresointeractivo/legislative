@@ -144,3 +144,18 @@
     $(document).ready(function(){
       $("div#timeline>div").tsort({order:'asc', data:'sort'});
     })
+  %section#incidence
+    %h4
+      =t('bill.incidence.title')
+    %p
+      =t('bill.incidence.intro')
+    - if !@bill.stage.blank?
+      %p
+        =t('bill.incidence.current_stage')
+        =t('bill.stage_names.'+@bill.stage)
+      %p
+        =t('bill.incidence.incidence_recommendations')
+        =t('bill.incidence.'+@bill.stage)
+    %a{'href'=>'https://docs.google.com/document/d/1PjdNn9l7H7tpn5Jv65F66VW_nnJ25bjDz_SHr5G0B6Y/edit'}
+      =t('bill.incidence.see_all')
+

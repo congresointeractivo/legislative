@@ -12,7 +12,7 @@
         - if ! bill.stage.blank?
           %span.light 
             = t('search.stage')
-          = bill.stage
+          =t('bill.stage_names.'+bill.stage)
           %br/
         - if ! bill.creation_date.blank?
           %span.light 
