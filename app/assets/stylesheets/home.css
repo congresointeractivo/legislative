@@ -1,17 +1,23 @@
+.proyectos,
+.legisladores {
+    padding: 50px 0;
+}
+
 .legisladores {
     background-color: #4A90E2;
-    padding: 50px 0;
     color: #FFF;
 }
 
-.legisladores .title {
+.legisladores .title,
+.proyectos .title {
     font-size: 60px;
     font-family: sans-serif;
     font-weight: bold;
     margin: 0;
 }
 
-.legisladores .copy {
+.legisladores .copy,
+.proyectos .copy {
     font-size: 28px;
     line-height: 40px;
     font-family: sans-serif;
@@ -59,4 +65,31 @@
     font-size: 20px;
     font-family: sans-serif;
     margin-bottom: 0;
+}
+
+.proyectos .number {
+    font-size: 70px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #F27A21;
+}
+
+.proyectos .number span {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.proyectos .ci-btn {
+    float: right;
+    margin-top: 40px;
+}
+
+/* ---- para mover a un archivo general ---- */
+.ci-btn {
+    color: #FFF;
+    background-color: #F27A21;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 3px solid #A44600;
 }
