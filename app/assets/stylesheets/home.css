@@ -10,35 +10,35 @@
 
 .legisladores .title,
 .proyectos .title {
+    margin: 0;
+    font-weight: bold;
     font-size: 60px;
     font-family: sans-serif;
-    font-weight: bold;
-    margin: 0;
 }
 
 .legisladores .copy,
 .proyectos .copy {
-    font-size: 28px;
-    line-height: 40px;
-    font-family: sans-serif;
-    font-weight: 300;
     margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 28px;
+    font-family: sans-serif;
+    line-height: 40px;
 }
 
 .legisladores .low-chamber,
 .legisladores .high-chamber {
-    padding-left: 140px;
     position: relative;
+    padding-left: 140px;
 }
 
 .legisladores .low-chamber:before,
 .legisladores .high-chamber:before {
-    content: '';
     position: absolute;
-    left: 15px;
     top: 5px;
+    left: 15px;
     width: 110px;
     height: 95px;
+    content: '';
 }
 
 .legisladores .low-chamber:before {
@@ -53,30 +53,30 @@
 
 .legisladores .low-chamber .number,
 .legisladores .high-chamber .number {
-    font-size: 42px;
-    font-weight: bold;
-    font-family: sans-serif;
     margin: 0;
+    font-weight: bold;
+    font-size: 42px;
+    font-family: sans-serif;
     line-height: 1;
 }
 
 .legisladores .low-chamber .copy,
 .legisladores .high-chamber .copy {
+    margin-bottom: 0;
     font-size: 20px;
     font-family: sans-serif;
-    margin-bottom: 0;
 }
 
 .proyectos .number {
+    color: #F27A21;
+    font-weight: bold;
     font-size: 70px;
     font-family: sans-serif;
-    font-weight: bold;
-    color: #F27A21;
 }
 
 .proyectos .number span {
-    font-size: 24px;
     font-weight: normal;
+    font-size: 24px;
 }
 
 .proyectos .ci-btn {
@@ -86,10 +86,18 @@
 
 /* ---- para mover a un archivo general ---- */
 .ci-btn {
-    color: #FFF;
-    background-color: #F27A21;
     padding: 10px 20px;
+    border-bottom: 3px solid #A44600;
+    background-color: #F27A21;
+    color: #FFF;
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    border-bottom: 3px solid #A44600;
+    transition: 0.25s;
+}
+
+.ci-btn:hover {
+    background-color: #D36A1C;
+    color: #FFF;
+    text-decoration: none;
 }
