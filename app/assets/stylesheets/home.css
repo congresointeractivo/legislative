@@ -1,0 +1,62 @@
+.legisladores {
+    background-color: #4A90E2;
+    padding: 30px 0;
+    color: #FFF;
+}
+
+.legisladores .title {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.legisladores .copy {
+    font-size: 28px;
+    line-height: 40px;
+    font-family: sans-serif;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.legisladores .low-chamber,
+.legisladores .high-chamber {
+    padding-left: 130px;
+    position: relative;
+}
+
+.legisladores .low-chamber:before,
+.legisladores .high-chamber:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 110px;
+    height: 95px;
+}
+
+.legisladores .low-chamber:before {
+    background: url('low-chamber-icon.png') center top no-repeat;
+    background-size: contain;
+}
+
+.legisladores .high-chamber:before {
+    background: url('high-chamber-icon.png') center top no-repeat;
+    background-size: contain;
+}
+
+.legisladores .low-chamber .number,
+.legisladores .high-chamber .number {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1;
+}
+
+.legisladores .low-chamber .copy,
+.legisladores .high-chamber .copy {
+    font-size: 20px;
+    font-family: sans-serif;
+    margin-bottom: 0;
+}
