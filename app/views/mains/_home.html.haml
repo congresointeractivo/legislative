@@ -13,7 +13,7 @@
                     = t('main.legisladores_low_chamber_number')
                 %p.copy
                     = t('main.legisladores_low_chamber_copy')
-                %a{:href => "http://localhost:3000/legisladores/busquedas?chamber=Diputado" }
+                %a{:href => "/legisladores/busquedas?chamber=Diputado" }
                     = t('main.legisladores_low_chamber_cta')
 
             %div.high-chamber.col-md-6
@@ -21,7 +21,7 @@
                     = t('main.legisladores_high_chamber_number')
                 %p.copy
                     = t('main.legisladores_high_chamber_copy')
-                %a{:href => "http://localhost:3000/legisladores/busquedas?chamber=Senador" }
+                %a{:href => "/legisladores/busquedas?chamber=Senador" }
                     = t('main.legisladores_high_chamber_cta')
 
 %section.proyectos
@@ -36,9 +36,10 @@
         %div.row
             %div.number.col-md-6
                 %h2.number
-                    432
-                    %span proyectos
+                    = @new_bill_count
+                    %span 
+                        = t('main.proyects_new', bills_date: @date_bills)
 
             %div.cta.col-md-6
-                %a{:href => "#", :class => 'ci-btn' }
+                %a{:href => "/proyectos/busquedas", :class => 'ci-btn' }
                     = t('main.proyectos_cta')

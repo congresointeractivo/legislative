@@ -7,6 +7,7 @@ class MainsController < ApplicationController
   def index
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
+    @new_bill_count = get_new_bill_count;
   
     if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank?
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
@@ -48,6 +49,17 @@ class MainsController < ApplicationController
     rescue => e
       response = Hash.new
     end
+  end
+
+  def get_new_bill_count
+    ## This is not working! Mock code
+    @date_bills = "10-10-2012" # Date.new();
+    begin
+      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?date=#{@date_bills}", 'application/json')
+    rescue => e
+      bills = Hash.new
+    end
+    bills.bills.length
   end
 
   # GET the bills per agenda
