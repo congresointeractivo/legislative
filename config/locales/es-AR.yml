@@ -17,7 +17,7 @@ es-AR:
     title_project: Congreso Interactivo
     welcome: Bienvenido(a)
   main:
-    search_placeholder: Ingresa un proyecto de ley o legislador
+    search_placeholder: Ingresa tu busqueda
     username: Nombre de usuario
     password: Contraseña
     stay_signed: Mantenerme conectado
@@ -47,6 +47,25 @@ es-AR:
     legislature: Legislatura
     view_the_agenda: Ver agenda parlamentaria
     hot_projects: Proyectos urgentes
+
+
+    legisladores_title: LEGISLADORES
+    legisladores_copy: Los legisladores son los representantes del pueblo en el Congreso Nacional. Sus funciones principales son las de proponer leyes y modificaciones a las ya existentes para mejorar la calidad de vida de todos los ciudadanos.
+    legisladores_low_chamber_number: 257 diputados
+    legisladores_low_chamber_copy: 150.000 personas representadas por cada uno (varía por provincia).
+    legisladores_low_chamber_cta: Conocé a tus diputados
+    legisladores_high_chamber_number: 72 senadores
+    legisladores_high_chamber_copy: Cada provincia tiene 3 representantes.
+    legisladores_high_chamber_cta: Conocé a tus senadores
+
+    proyectos_title: PROYECTOS
+    proyectos_copy: Los proyectos de ley son textos que proponen una nueva legislación o modificaciones a las leyes existentes. Por lo general son elaborados por los legisladores, aunque el Poder Ejecutivo puede presentar sus proyectos, así como también la ciudadanía mediante la iniciativa popular.
+    proyectos_cta: ver todos los proyectos 
+    proyects_new: Presentados desde %{bills_date}
+
+
+
+
   glossaries:
     title: Glosarios
   search:

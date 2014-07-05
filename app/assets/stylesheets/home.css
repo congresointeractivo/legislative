@@ -1,0 +1,103 @@
+.proyectos,
+.legisladores {
+    padding: 50px 0;
+}
+
+.legisladores {
+    background-color: #4A90E2;
+    color: #FFF;
+}
+
+.legisladores .title,
+.proyectos .title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+
+.legisladores .copy,
+.proyectos .copy {
+    margin-bottom: 40px;
+    font-weight: 300;
+    font-size: 28px;
+    font-family: sans-serif;
+    line-height: 40px;
+}
+
+.legisladores .low-chamber,
+.legisladores .high-chamber {
+    position: relative;
+    padding-left: 140px;
+}
+
+.legisladores .low-chamber:before,
+.legisladores .high-chamber:before {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    width: 110px;
+    height: 95px;
+    content: '';
+}
+
+.legisladores .low-chamber:before {
+    background: url('low-chamber-icon.png') center top no-repeat;
+    background-size: contain;
+}
+
+.legisladores .high-chamber:before {
+    background: url('high-chamber-icon.png') center top no-repeat;
+    background-size: contain;
+}
+
+.legisladores .low-chamber .number,
+.legisladores .high-chamber .number {
+    margin: 0;
+    font-weight: bold;
+    font-size: 42px;
+    font-family: sans-serif;
+    line-height: 1;
+}
+
+.legisladores .low-chamber .copy,
+.legisladores .high-chamber .copy {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.proyectos .number {
+    color: #F27A21;
+    font-weight: bold;
+    font-size: 70px;
+    font-family: sans-serif;
+}
+
+.proyectos .number span {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.proyectos .ci-btn {
+    float: right;
+    margin-top: 40px;
+}
+
+/* ---- para mover a un archivo general ---- */
+.ci-btn {
+    padding: 10px 20px;
+    border-bottom: 3px solid #A44600;
+    background-color: #F27A21;
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.ci-btn:hover {
+    background-color: #D36A1C;
+    color: #FFF;
+    text-decoration: none;
+}
