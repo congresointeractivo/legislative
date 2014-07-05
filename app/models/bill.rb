@@ -1,4 +1,4 @@
-require 'billit_representers/models/bill'
+require 'billit_representers_argentina/models/bill'
 
 class Billit::Bill
   def icon

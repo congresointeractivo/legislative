@@ -2,8 +2,8 @@ require 'net/http'
 require 'httparty'
 
 require 'popit_representers/models/organization_collection'
-require 'billit_representers/models/bill_page'
-require 'billit_representers/models/bill_basic'
+require 'billit_representers_argentina/models/bill_page'
+require 'billit_representers_argentina/models/bill_basic'
 require './app/models/bill'
 require './app/models/bill_basic'
 

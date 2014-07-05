@@ -1,5 +1,5 @@
-require 'billit_representers/models/paperwork_collection'
-require 'billit_representers/models/bill'
+require 'billit_representers_argentina/models/paperwork_collection'
+require 'billit_representers_argentina/models/bill'
 
 class NotifiersController < ApplicationController
 

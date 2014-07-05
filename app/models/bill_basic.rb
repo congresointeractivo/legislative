@@ -1,4 +1,4 @@
-require 'billit_representers/models/bill_basic'
+require 'billit_representers_argentina/models/bill_basic'
 
 class Billit::BillBasic
   def icon

@@ -1,4 +1,4 @@
-require 'billit_representers/models/bill_page'
+require 'billit_representers_argentina/models/bill_page'
 
 class MainsController < ApplicationController
   caches_page :index, :sitemap
