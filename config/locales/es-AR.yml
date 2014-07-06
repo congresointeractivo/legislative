@@ -9,7 +9,7 @@ es-AR:
     congressmen: Legisladores
     disclosure: Declaraciones
     from: Monitor Parlamentario
-    glossary: Glosario
+    glossary: Proceso legislativo
     home: Portada
     menu: Menú
     search: Búsqueda
@@ -67,7 +67,7 @@ es-AR:
 
 
   glossaries:
-    title: Glosarios
+    title: Proceso parlamentario
   search:
     search_title: Búsqueda
     search_for: 'Buscar por:'
@@ -304,7 +304,7 @@ es-AR:
     communications: comunicaciones
     congressmen: legisladores
     disclosures: declaraciones
-    glossaries: glosarios
+    glossaries: proceso
     searches: busquedas
     sessions: sesiones
     users: usuarios
