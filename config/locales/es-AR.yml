@@ -245,7 +245,7 @@ es-AR:
     verified_mail: El correo electrónico fue exitosamente verificado
     subscribe: Suscríbase
     email: Correo Electrónico
-    subscription_intro: 'Suscripción a los movimientos de un proyecto. Recibirá en su email una notificación cada vez que ocurra una novedad en este proyecto (dictámen, votación, etc). Nota: Durate la fase beta es posible que esta funcionalidad esté demorada o no funcione correctamente.'
+    description: 'Suscripción a los movimientos de un proyecto. Recibirá en su email una notificación cada vez que ocurra una novedad en este proyecto (dictámen, votación, etc). Nota: Durate la fase beta es posible que esta funcionalidad esté demorada o no funcione correctamente.'
   communication:
     name: Nombre
     email: E-mail

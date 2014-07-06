@@ -2,7 +2,7 @@
   .col-md-offset-4.col-md-4
     %h2
       = t('user_subscriptions.subscribe')
-    %p.intro
-      = t('user_subscriptions.subscription_intro')
+    %p
+      = sprintf( t('user_subscriptions.description'), params[:bill]).html_safe
     %hr
       = render :partial => "form", :locals => {:user => @user }
