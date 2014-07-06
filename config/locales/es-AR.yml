@@ -105,6 +105,8 @@ es-AR:
     found_results: Se encontraron %s resultados
     pages_with_found_results: Página %s de %s resultados encontrados
     number_of_pages: Página %s de %s
+    all_project_types: Todos los proyectos
+    project_type: Tipo de proyecto
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara

@@ -4,6 +4,16 @@
     %input.form-control{:name=>'q', :id=>'q', 'value' => params[:q], :placeholder => t('search.placeholder_search_for'), :onfocus => "ga('send','bills_filters','focus_search')"}
 
   %div.form-group
+    = label_tag :stage, t('search.project_type')
+    %select{:name => "project_type", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_project_type')"}
+      %option{:value => "", selected: params[:project_type] == ""}= t 'search.all_project_types'
+      - @project_types = Billit::Bill.class_variable_get(:@@project_type_valid_values)
+      - if @project_types != nil
+        - @project_types.each do |project_type|
+          %option{:value => project_type, selected: params[:project_type] == project_type}= project_type
+
+
+  %div.form-group
     = label_tag :bill_id, t('search.bulletin')
     = text_field_tag :bill_id, params[:bill_id], :class => 'form-control', :placeholder => t('search.placeholder_bulletin'), :onfocus => "ga('send','bills_filters','focus_bulletin')"
 
