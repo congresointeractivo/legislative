@@ -257,6 +257,7 @@ es-AR:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
+    intro: "Puede tener una conversación pública con un legislador. Estos mensajes son enviados a las casillas oficiales y las respuestas son publicadas aquí junto con las preguntas."
   congressmen:
     home: Portada
     breadcrumb: Legisladores

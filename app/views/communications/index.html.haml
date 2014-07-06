@@ -21,7 +21,7 @@
     %div
       %p
         = t('communication.intro')
-    %div.panel.panel-default
+    %div.panel.panel-default{style: "border: none"}
       %div.form-comunication.panel-body
       - if !ENV['component_writeit']
         = image_tag('pronto-preguntales.png')
@@ -31,19 +31,6 @@
           = field_set_tag do
             %div.row
               %div.col-md-3.message-box-left
-                %div.form-group
-                  %h5
-                    de:
-                  %div.input-group
-                    = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name'), :required => 'required'
-                    %span.input-group-addon
-                      %i.fa.fa-user
-                %div.form-group
-                  %div.input-group
-                    = email_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email'), :required => 'required'
-                    %span.input-group-addon
-                      %i.fa.fa-envelope-o
-
                 %div.form-group.tab-content
                   %h5
                     para:
@@ -57,6 +44,19 @@
                       - else
                         %option{:value => congressmen.popit_api_uri}
                           =congressmen.name 
+
+                %div.form-group
+                  %h5
+                    de:
+                  %div.input-group
+                    = text_field_tag :author_name, nil ,:class => "form-control", :placeholder=>t('communication.name'), :required => 'required'
+                    %span.input-group-addon
+                      %i.fa.fa-user
+                %div.form-group
+                  %div.input-group
+                    = email_field_tag :author_email, nil ,:class => "form-control",:placeholder=>t('communication.email'), :required => 'required'
+                    %span.input-group-addon
+                      %i.fa.fa-envelope-o
 
               %div.col-md-9.message-box-right.tituloFormulario
                 %h5
