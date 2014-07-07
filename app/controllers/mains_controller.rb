@@ -24,7 +24,7 @@ class MainsController < ApplicationController
     @hot_bills = {};
 
     if !ENV['billit_url'].blank?
-      @hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
+      #@hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
     end
 
     if (!ENV['writeit_url_base'].blank?)
@@ -56,10 +56,10 @@ class MainsController < ApplicationController
     @date_bills = "10-10-2012" # Date.new();
     begin
       bills = Billit::BillPage.get(ENV['billit_url'] + "search/?date=#{@date_bills}", 'application/json')
+      bills.bills.length
     rescue => e
-      bills = Hash.new
+      "Algunos"
     end
-    bills.bills.length
   end
 
   # GET the bills per agenda
