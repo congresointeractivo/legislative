@@ -164,10 +164,14 @@ es-AR:
     title: Proyectos de ley
     incidence:
       title: Incidencia
-      intro: Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación.
+      intro: 'Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación. Nota: Es posible que en la vesión beta los estados no estén asignados correctamente.'
       current_stage: 'Etapa actual:'
-      incidence_recommendation: 'Recomendaciones de incidencia:'
+      incidence_recommendations: 'Recomendaciones de incidencia:'
       see_all: Ver todas
+      Ingresado_description: El proyecto ha sido presentado pero aún no está en la agenda de la comisión.
+      Ingresado: 'Si estamos trabajando en una iniciativa que ya se ha presentado y queremos promover que llegue a tratarse en una comisión, primero debemos saber en a qué comisiones se ha enviado el proyecto. Primero tiene que tratarse por la comisión de cabecera, y después por las demás (si las hay). El objetivo es que el presidente de la comisión cabecera ponga el proyecto en agenda.'      
+      Rechazado_description: El proyecto fué votado y rechazado.
+      Rechazado: 'Esto significa que no se consiguió el consenso necesario para aprobar este proyecto. Es probable que esto signifique que este proyecto no sea apropiado o que su implementación no sea conveniente. Si aún estamos interesados en cambiar esta regulación es necesario reconsiderar la estrategia e intentar de nuevo.'      
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
