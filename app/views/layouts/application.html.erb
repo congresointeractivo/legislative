@@ -130,6 +130,23 @@
   <%= yield %>
   <!-- End content -->
 
+
+  <div class="feedback" style="margin-top: -150px; clear:both; margin-top: 100px;">
+  <form accept-charset="UTF-8" action="/feedback" class="form-inline" method="post">
+  <label class='label-survey'>
+    ¿Cómo podemos hacer esta página mejor para vos?
+  </label>
+  <textarea class="input-xlarge" id="feedback_message" name="feedback_message" placeholder="Tus sugerencias e ideas nos ayudan a mejorar" rel="feedback-field">
+  </textarea>
+  <input class="btn btn-info hide" id="feedback-submit" name="commit" type="submit" value="Enviar" />
+  </form>
+  </div>
+  <script type="text/javascript">
+  $("#feedback_message").on("focus",function() {
+    $("#feedback-submit").removeClass("hide");
+  })
+  </script>
+
   <div class="arregloFotter"></div>
 
   <!-- Footer -->
