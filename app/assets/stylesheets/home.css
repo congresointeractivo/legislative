@@ -113,7 +113,8 @@
 }
 
 /* ---- para mover a un archivo general ---- */
-.ci-btn {
+.ci-btn,
+.ci-btn:visited {
     padding: 10px 20px;
     border-bottom: 3px solid #A44600;
     background-color: #F27A21;
