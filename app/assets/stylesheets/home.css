@@ -46,7 +46,6 @@
     margin: 0;
     font-weight: bold;
     font-size: 60px;
-    font-family: sans-serif;
 }
 
 .legisladores .copy,
@@ -54,7 +53,6 @@
     margin-bottom: 40px;
     font-weight: 300;
     font-size: 28px;
-    font-family: sans-serif;
     line-height: 40px;
 }
 
@@ -89,7 +87,6 @@
     margin: 0;
     font-weight: bold;
     font-size: 42px;
-    font-family: sans-serif;
     line-height: 1;
 }
 
@@ -97,14 +94,12 @@
 .legisladores .high-chamber .copy {
     margin-bottom: 0;
     font-size: 20px;
-    font-family: sans-serif;
 }
 
 .proyectos .number {
     color: #F27A21;
     font-weight: bold;
     font-size: 70px;
-    font-family: sans-serif;
 }
 
 .proyectos .number span {
