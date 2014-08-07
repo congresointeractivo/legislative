@@ -5,8 +5,11 @@ class FeedbackController < ApplicationController
   # GET /feedback
   def create
     @feedback = params[:feedback_message] 
-    @feedback = @feedback + " \n <br/> \n " + request.env["HTTP_REFERER"]
-    @feedback = @feedback + " \n <br/> \n " + request.env["REMOTE_ADDR"]
+    @feedback = @feedback + " \n Referer: " + request.env["HTTP_REFERER"]
+    @feedback = @feedback + " \n IP: " + request.env["REMOTE_ADDR"]
+    @feedback = @feedback + " \n Date: " + Time.now.to_s
+
     FeedbackMailer.feedback_email(@feedback).deliver
   end
+#  alias index
 end
