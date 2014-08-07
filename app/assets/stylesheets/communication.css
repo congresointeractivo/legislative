@@ -132,7 +132,7 @@
 .message-box-right .form-control::-webkit-input-placeholder,
 .message-box-right .form-control:-moz-placeholder {
   color: #E6E6C9;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
 
 
@@ -174,7 +174,7 @@
 
 .form-control::-moz-placeholder {
   color: #A6A691!important;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
 
 .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
@@ -269,4 +269,8 @@ ts {
 .form-control#subject {
   color: #F9F9EB!important;
 }
-/*End Comunicacion*/
+
+.expander-after {
+  display: inline-block;
+}
+/*End communication*/

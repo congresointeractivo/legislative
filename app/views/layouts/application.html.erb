@@ -14,7 +14,6 @@
 </title>
     <meta name="description" content="<%= ENV['description'] %>">
     <meta name="keywords" content="<%= ENV['keywords'] %>">
-    
     <meta name="og:image" content="<%= asset_path('//www.congresointeractivo.org/img/logo.png') %>">
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
     <meta name="og:description" content="<%= ENV['og_description'] %>">
@@ -43,16 +42,7 @@
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:400,700' %>
     <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
-    <%= stylesheet_link_tag '//cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css' %>
-    <%= stylesheet_link_tag 'bootstrap.min.css' %>
-    <%= stylesheet_link_tag 'agendas.css' %>
-    <%= stylesheet_link_tag 'bills.css' %>
-    <%= stylesheet_link_tag 'communication.css' %>
-    <%= stylesheet_link_tag 'congressman.css' %>
-    <%= stylesheet_link_tag 'glossaries.css' %>
-    <%= stylesheet_link_tag 'jquery.tagit.min.css' %>
-    <%= stylesheet_link_tag 'main.css' %>
-    <%= stylesheet_link_tag 'home.css' %>
+    <%= stylesheet_link_tag 'application' %>
 
     <%= favicon_link_tag 'http://www.congresointeractivo.org/favicon.ico' %>
 
@@ -62,6 +52,7 @@
     <!-- scripts concatenated and minified via build script -->
     <!-- Latest compiled and minified JavaScript -->
     <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
+    <%= javascript_include_tag 'jquery.expander.js' %>
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
     <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'%>
     <%= javascript_include_tag '//cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
@@ -125,7 +116,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  
+
   <!-- Content -->
   <%= yield %>
   <!-- End content -->

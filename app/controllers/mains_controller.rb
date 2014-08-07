@@ -27,7 +27,7 @@ class MainsController < ApplicationController
       #@hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
     end
 
-    if (!ENV['writeit_url_base'].blank?)
+    if (!ENV['writeit_base_url'].blank?)
 	    @answers = LegislativeAnswerCollection.get()
 
 	    if @answers.objects.length > 2
@@ -42,7 +42,7 @@ class MainsController < ApplicationController
     query = URI::escape(query)
     #response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
     #response = JSON.parse(response).first
-    
+
     begin
       response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
       response = JSON.parse(response).first
