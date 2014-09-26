@@ -6,5 +6,4 @@
 User-Agent: *
 Disallow: /suscripcion/
 Disallow: /usuarios/
-Disallow: *.xls
-Disallow: /*.xls
+Disallow: /*.xls$

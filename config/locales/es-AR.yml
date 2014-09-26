@@ -255,6 +255,7 @@ es-AR:
     email: Correo Electrónico
     description: 'Suscripción a los movimientos de un proyecto. Recibirá en su email una notificación cada vez que ocurra una novedad en este proyecto (dictámen, votación, etc). Nota: Durate la fase beta es posible que esta funcionalidad esté demorada o no funcione correctamente.'
   communication:
+    intro: "Puede tener una conversación pública con un legislador. Estos mensajes son enviados a las casillas oficiales y las respuestas son publicadas aquí junto con las preguntas."
     name: Nombre
     to: 'Para:'
     email: E-mail
@@ -266,7 +267,15 @@ es-AR:
     list_messages: Mensajes enviados
     questions: Preguntas hechas a %s
     confirmation_mail_sent: 'Su mensaje ha sido enviado correctamente'
-    intro: "Puede tener una conversación pública con un legislador. Estos mensajes son enviados a las casillas oficiales y las respuestas son publicadas aquí junto con las preguntas."
+    confirmation_mail_sent_fail: 'Tenemos problemas enviando tu email, el correo %s parece no ser válido o no haz seleccionado un destinatario'
+    untitled: Sin asunto
+    asked: ' preguntó:'
+    question_asked_to: 'Pregunta realizada a:'
+    from: 'de:'
+    to: 'para:'
+    read_more: mostrar todos
+    read_less: ocultar
+    no_results: 'Oops, ¡no encontramos nada!'
   congressmen:
     home: Portada
     breadcrumb: Legisladores
