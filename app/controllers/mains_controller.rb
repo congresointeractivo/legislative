@@ -52,11 +52,10 @@ class MainsController < ApplicationController
   end
 
   def get_new_bill_count
-    ## This is not working! Mock code
-    @date_bills = "10-10-2012" # Date.new();
+    @date_bills = Date.today().prev_month(2).strftime("%d-%m-%Y");
     begin
-      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?date=#{@date_bills}", 'application/json')
-      bills.bills.length
+      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}", 'application/json')
+      bills.total_entries
     rescue => e
       "Algunos"
     end

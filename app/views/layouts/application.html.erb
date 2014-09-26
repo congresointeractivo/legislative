@@ -101,6 +101,20 @@
           <li><%= link_to t('layout.communication'), communications_path %><li/>
           <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
         </ul>
+
+        <div class="container" id="headersearch">
+          <form accept-charset="UTF-8" action="busquedas" class="form-inline" method="get"><div style="display:none"><input name="utf8" value="✓" type="hidden"></div>
+              <div class="input-group">
+                <input class="form-control search-box" name="q" placeholder="Ingresa tu busqueda" type="text">
+                <input checked="" name="congressmen" value="2" type="hidden">
+                <input checked="" name="bills" value="1" type="hidden">
+                <span class="input-group-btn">
+                  <button class="search-btn" type="submit"></button>
+                </span>
+              </div>
+          </form>
+        </div>
+
         <% if current_user %>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">

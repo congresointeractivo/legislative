@@ -50,36 +50,6 @@
         - @chambers.each do |chamber|
           %option{:value => chamber, selected: params[:initial_chamber] == chamber}= chamber
 
-  %div.form-group
-    = label_tag :current_priority, t('search.current_priority')
-    %select{:name => "current_priority[]", :class => "form-control chosen", :multiple => "multiple", :'data-placeholder' => t('search.placeholder_priority'), :onfocus => "ga('send','bills_filters','focus_priority')"}
-      %option{:value => "", selected: params[:current_priority] == ""}
-      - @selectable_priorities = Billit::Bill.class_variable_get(:@@current_priority_valid_values)
-      - if @selectable_priorities != nil
-        - @selectable_priorities.each do |priority|
-          - if !params[:current_priority].blank?
-            - params[:current_priority].each do |priority_in_param|
-              - if priority_in_param == priority
-                %option{:value => priority, selected: "selected"}= priority
-        - unselected_priorities = Array.new
-        - if params[:current_priority] != nil
-          - unselected_priorities = @selectable_priorities - params[:current_priority]
-        - else
-          - unselected_priorities = @selectable_priorities
-        - unselected_priorities.each do |unselected_priority|
-          %option{:value => unselected_priority}= unselected_priority
-      - else
-        %option{:value => priority}= priority
-
-  - presets = preset_queries
-  - if presets != nil
-    %div.form-group
-      = label_tag :initial_chamber, t('search.predefined_queries')
-      %select{:name => "predefined_queries", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_predefined_queries')"}
-        %option{:value => "", selected: params[:predefined_queries] == ""}= t 'search.predefined_queries'
-        - if presets != nil
-          - presets.each do |key, value|
-            %option{:value => value, selected: params[:predefined_queries] == value}= key
 
   %div.form-group
     = label_tag :creation_date_min, t('search.creation_date_min')
