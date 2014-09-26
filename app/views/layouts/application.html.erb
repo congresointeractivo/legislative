@@ -14,7 +14,6 @@
 </title>
     <meta name="description" content="<%= ENV['description'] %>">
     <meta name="keywords" content="<%= ENV['keywords'] %>">
-    
     <meta name="og:image" content="<%= asset_path('//www.congresointeractivo.org/img/logo.png') %>">
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
     <meta name="og:description" content="<%= ENV['og_description'] %>">
@@ -38,21 +37,27 @@
     <meta name="mobile-web-app-capable" content="yes">
     <!-- end meta for fullscreen -->
 
-    <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %>
+    <!-- bing -->
+    <meta name="msvalidate.01" content="<%= ENV['bing_search'] %>">
+    <!-- eof bing -->
+
+    <!-- twitter card summary -->
+    <meta name="twitter:card" content="<%= ENV['twitter_card'] %>">
+    <meta name="twitter:site" content="<%= ENV['twitter_site'] %>">
+    <meta name="twitter:title" content="<%= ENV['twitter_title'] %>">
+    <meta name="twitter:description" content="<%= ENV['twitter_description'] %>">
+    <meta name="twitter:creator" content="<%= ENV['twitter_creator'] %>">
+    <meta name="twitter:image" content="<%= ENV['twitter_image'] %>">
+    <meta name="twitter:domain" content="<%= ENV['twitter_domain'] %>">
+    <!-- eo twitter card -->
+
+    <!-- <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" %> -->
+    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/chosen/1.0/chosen.min.css" %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Raleway:400,700' %>
     <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Lato:400,700' %>
     <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
-    <%= stylesheet_link_tag '//cdn.jsdelivr.net/tag-it/2.0/css/jquery.tagit.css' %>
-    <%= stylesheet_link_tag 'bootstrap.min.css' %>
-    <%= stylesheet_link_tag 'agendas.css' %>
-    <%= stylesheet_link_tag 'bills.css' %>
-    <%= stylesheet_link_tag 'communication.css' %>
-    <%= stylesheet_link_tag 'congressman.css' %>
-    <%= stylesheet_link_tag 'glossaries.css' %>
-    <%= stylesheet_link_tag 'jquery.tagit.min.css' %>
-    <%= stylesheet_link_tag 'main.css' %>
-    <%= stylesheet_link_tag 'home.css' %>
+    <%= stylesheet_link_tag 'application' %>
 
     <%= favicon_link_tag 'http://www.congresointeractivo.org/favicon.ico' %>
 
@@ -62,6 +67,7 @@
     <!-- scripts concatenated and minified via build script -->
     <!-- Latest compiled and minified JavaScript -->
     <%= javascript_include_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js' %>
+    <%= javascript_include_tag 'jquery.expander.js' %>
     <%= javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js' %>
     <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'%>
     <%= javascript_include_tag '//cdn.jsdelivr.net/tag-it/2.0/js/tag-it.min.js' %>
@@ -110,6 +116,20 @@
           <li><%= link_to t('layout.communication'), communications_path %><li/>
           <li><%= link_to t('layout.glossary'), glossaries_path %><li/>
         </ul>
+
+        <div class="container" id="headersearch">
+          <form accept-charset="UTF-8" action="busquedas" class="form-inline" method="get"><div style="display:none"><input name="utf8" value="✓" type="hidden"></div>
+              <div class="input-group">
+                <input class="form-control search-box" name="q" placeholder="Ingresa tu busqueda" type="text">
+                <input checked="" name="congressmen" value="2" type="hidden">
+                <input checked="" name="bills" value="1" type="hidden">
+                <span class="input-group-btn">
+                  <button class="search-btn" type="submit"></button>
+                </span>
+              </div>
+          </form>
+        </div>
+
         <% if current_user %>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
@@ -125,7 +145,7 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-  
+
   <!-- Content -->
   <%= yield %>
   <!-- End content -->
@@ -164,13 +184,6 @@
   </div>
   <!-- End footer -->
 
-  <!-- User feedback by freshdesk -->
-  <script type="text/javascript" src="//assets.freshdesk.com/widget/freshwidget.js"></script>
-  <script type="text/javascript">
-    FreshWidget.init("", {"queryString": "&widgetType=popup&formTitle=Dudas%2C+problemas+y+sugerencias&submitThanks=Gracias.+Con+tu+ayuda+mejoraremos+pronto.", "widgetType": "popup", "buttonType": "text", "buttonText": "¿Comentarios?", "buttonColor": "#E6E6C9", "buttonBg": "#A6A691", "alignment": "2", "offset": "235px", "submitThanks": "Gracias. Con tu ayuda mejoraremos pronto.", "formHeight": "500px", "url": "//congresointeractivo.freshdesk.com"} );
-  </script>
-  <!-- End user feedback by freshdesk -->
-
   <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -178,7 +191,8 @@
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', '<%= ENV['analytics'] %>');  // Replace with your property ID.
+    ga('create', '<%= ENV['analytics'] %>', '<%= ENV['domain'] %>'); // Replace with your property ID and domain
+    ga('require', 'displayfeatures');
     ga('send', 'pageview');
 
     $(document).ready(function(){

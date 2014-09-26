@@ -381,6 +381,15 @@ border: none;
 
 .navbar-inverse .navbar-nav>li>a {
   color: #1C1C1C;
+  font-size: 14px;
+}
+
+#headersearch {
+  position: relative;
+  top: 2em;
+  left: -8em;
+  height: auto;
+  width: 20em;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {

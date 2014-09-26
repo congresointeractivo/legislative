@@ -27,7 +27,7 @@ class MainsController < ApplicationController
       #@hot_bills = prioritize Billit::BillPage.get(ENV['billit_url'] + URI::escape("search?current_priority=Discusión inmediata|Suma|Simple&per_page=100"), 'application/json').bills
     end
 
-    if (!ENV['writeit_url_base'].blank?)
+    if (!ENV['writeit_base_url'].blank?)
 	    @answers = LegislativeAnswerCollection.get()
 
 	    if @answers.objects.length > 2
@@ -40,9 +40,7 @@ class MainsController < ApplicationController
   def get_current_chamber_agenda chamber
     query = sprintf("select * from data where chamber = '%s' order by date DESC limit 1", chamber)
     query = URI::escape(query)
-    #response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
-    #response = JSON.parse(response).first
-    
+
     begin
       response = RestClient.get(ENV['agendas_url'] + query, :content_type => :json, :accept => :json, :"x-api-key" => ENV['morph_io_api_key'])
       response = JSON.parse(response).first
@@ -52,11 +50,10 @@ class MainsController < ApplicationController
   end
 
   def get_new_bill_count
-    ## This is not working! Mock code
-    @date_bills = "10-10-2012" # Date.new();
+    @date_bills = Date.today().prev_month(2).strftime("%d-%m-%Y");
     begin
-      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?date=#{@date_bills}", 'application/json')
-      bills.bills.length
+      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}", 'application/json')
+      bills.total_entries
     rescue => e
       "Algunos"
     end
@@ -69,7 +66,6 @@ class MainsController < ApplicationController
       @keywords << bill_id + '|'
     end
     @keywords = URI::escape(@keywords)
-    #bills = Billit::BillPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')
 
     begin
       bills = Billit::BillPage.get(ENV['billit_url'] + "search/?uid=#{@keywords}", 'application/json')

@@ -23,17 +23,12 @@
           = t('search.creation_date')
         = localize bill.creation_date.to_date, :format => :long
         %br/
+      - if ! bill.project_type.blank?
+        %span.light
+          = t('search.project_type')
+        = bill.project_type
+        %br/
       - if ! bill.source.blank?
         %span.light
           = t('search.initiative')
         = bill.source
-
-
-  /
-    %div.col-md-2
-      %p
-        = link_to (new_user_subscription_path(:bill => bill.uid)) do
-          %i.fa.fa-star-o{title: t('bill.subscribe')}
-          = t('bill.subscribe')
-          %span.visible-xs 
-            = t('bill.subscribe')
