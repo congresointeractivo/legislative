@@ -51,11 +51,6 @@
               = t('bill.creation_date') + ":"
             = localize @bill.creation_date.to_date
             %br/
-          -if !@bill.source.blank?
-            %span.light
-              = t('bill.source') + ":"
-            = @bill.source
-            %br/
           -if !@bill.initial_chamber.blank?
             %span.light
               = t('bill.initial_chamber') + ":"

@@ -161,7 +161,7 @@
         %strong
           =t('bill.incidence.incidence_recommendations')
         %p
-          =t('bill.incidence.'+@bill.stage)
-    %a{'href'=>'https://docs.google.com/document/d/1PjdNn9l7H7tpn5Jv65F66VW_nnJ25bjDz_SHr5G0B6Y/edit'}
-      =t('bill.incidence.see_all')
+    =t('bill.incidence.'+@bill.stage)
+  = link_to (url_for :controller => 'glossaries', :action=>'index') do
+    =t('bill.incidence.see_all')
 
