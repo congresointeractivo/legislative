@@ -22,7 +22,7 @@ class BillsController < ApplicationController
       @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
       if !@bill.blank? and !@bill.title.blank?
         # THE FOLLOWING HAS NOT BEEN TESTED SO IT WILL BE COMMENTED
-
+        p @bill
         # paperworks
         @date_freq = Array.new
         bill_range_dates = @bill.paperworks.map do |paperwork|
