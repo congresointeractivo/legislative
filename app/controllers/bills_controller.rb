@@ -100,6 +100,20 @@ class BillsController < ApplicationController
   end
 
   def searches
+
+    @congressmen =  Hash.new
+
+    if !ENV['popit_url'].blank? and !ENV['popit_persons'].blank? and !ENV['popit_search'].blank? and !ENV['popit_organizations'].blank? and !ENV['popit_organizations_search'].blank?
+      @congressmen = PopitPersonCollection.new
+      begin
+        RestClient.get ENV['popit_persons']
+        @congressmen.get ENV['popit_persons']+'?per_page=200', 'application/json'
+        @congressmen.persons.sort! { |x,y| x.name <=> y.name }
+      rescue => e
+        @message = e.response
+      end
+    end
+
     @title = t('bill.title') + ' - '
 
     @keywords = String.new
