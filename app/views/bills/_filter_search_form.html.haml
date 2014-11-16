@@ -17,13 +17,11 @@
     = label_tag :bill_id, t('search.bulletin')
     = text_field_tag :bill_id, params[:bill_id], :class => 'form-control', :placeholder => t('search.placeholder_bulletin'), :onfocus => "ga('send','bills_filters','focus_bulletin')"
 
-  %div.form-group
-    = label_tag :authors, t('search.author')
-    - if params[:authors] == nil
-      - params[:authors] = ""
-    %div
-      %input{"type" => "text", "value" => params[:authors], "class" => "form-control", "id" => "authors", "name" => "authors", "placeholder" => t('search.placeholder_author'), :autocomplete=>"off"}
-
+  - if !@congressmen.blank? and !@congressmen.persons.blank?
+    %div.form-group
+      = label_tag :name, t('congressmen.form_name')
+      = select_tag "name", options_from_collection_for_select(@congressmen.persons, "name", "name", params[:name]), prompt: t('congressmen.placeholder_name'), class: 'form-control chosen'
+  
   %div.form-group
     = label_tag :stage, t('search.stage')
     %select{:name => "stage", :class => "form-control", :onfocus => "ga('send','bills_filters','focus_stage')"}
