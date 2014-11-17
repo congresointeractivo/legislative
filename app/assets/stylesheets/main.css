@@ -386,8 +386,9 @@ border: none;
 
 #headersearch {
   position: relative;
+  float: left;
   top: 2em;
-  left: -8em;
+  left: 6em;
   height: auto;
   width: 20em;
 }

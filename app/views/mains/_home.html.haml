@@ -39,6 +39,12 @@
                     = @new_bill_count
                     %span 
                         = t('main.proyects_new', bills_date: @date_bills)
+            %p
+                = @new_laws_count
+                %span 
+                    = t('main.new_laws')
+            %p
+                = t('main.last_update', date: @last_update)
 
             %div.cta.col-md-6
                 %a{:href => "/proyectos/busquedas", :class => 'ci-btn' }
