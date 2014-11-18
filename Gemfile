@@ -77,6 +77,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'pry-rails'
 end
 
 group :test do

@@ -107,6 +107,7 @@ es-AR:
     number_of_pages: Página %s de %s
     all_project_types: Todos los proyectos
     project_type: Tipo de proyecto
+    askthem: Preguntas
   agendas:
     title: Agenda parlamentaria
     chamber: Cámara

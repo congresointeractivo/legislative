@@ -13,13 +13,13 @@
         = link_to congressman.name, congressman_path(congressman.id)
       %p
         = congressman.title
-        %br/
-        - if ! congressman.represent[0].region.blank?
-          %span.light
-            = t('search.represent')
-          = congressman.represent[0].region
+        - if ! congressman.data[:district].blank?
+          %p
+            %span.light
+              = t('search.represent')
+            = congressman.data[:district]
       %p
         = link_to url_for(controller: "communications", action: "index", id: congressman.id) do
           %i.fa.fa-envelope-o
           = sprintf( t('search.askthem'), congressman.name)
-  
+      %br/
