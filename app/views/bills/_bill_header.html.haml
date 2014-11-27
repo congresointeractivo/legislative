@@ -75,11 +75,6 @@
               = t('bill.stage') + ":"
             = @bill.stage
             %br/
-          -if !@bill.status.blank?
-            %span.light
-              = t('bill.status') + ":"
-            = @bill.status
-            %br/
           -if !@bill.publish_date.blank?
             %span.light
               = t('bill.publish_date') + ":"

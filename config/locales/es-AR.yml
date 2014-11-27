@@ -165,7 +165,7 @@ es-AR:
     title: Proyectos de ley
     incidence:
       title: '¿Qué puedo hacer? (Posibilidades de incidencia)'
-      intro: 'Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación. Nota: Es posible que en la vesión beta los estados no estén asignados correctamente.'
+      intro: 'Nota: Estamos trabajando para mejorar las recomendaciones de incidencia, en la version beta NO SON CORRECTAS. Si querés ayudarnos a mejorar el texto o la detección del estado de la ley podés contactarnos. Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación. '
       current_stage: 'Etapa actual:'
       incidence_recommendations: 'Recomendaciones de incidencia:'
       see_all: Ver todas
