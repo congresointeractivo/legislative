@@ -332,6 +332,7 @@ es-AR:
     new: nuevo
     edit: editar
     user_subscriptions: suscripcion
+    glossaries: proceso
   date:
     abbr_day_names:
     - dom
