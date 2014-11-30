@@ -2,13 +2,17 @@ module GlossariesHelper
 
   def get_pad padid = nil
 
+    @pad = { id: params[:id] } 
     ether = EtherpadLite.connect @padurl, @apikey, '1.2.1'
 
     pad = ether.pad "metodologia"
+    
+    @pad[:edit_url] = "#{@padurl}p/metodologia"
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
-    pad_text = markdown.render(pad.text)
-    pad_text
+
+    @pad[:text] = markdown.render(pad.text)
+    @pad
   end
 	
   def getlist
