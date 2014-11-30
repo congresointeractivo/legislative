@@ -16,8 +16,9 @@ class GlossariesController < ApplicationController
     @padurl = "http://pad.congresointeractivo.org/"
     @apikey = "2064063a3291c4a32b47e9c636649dea83d918ff6a9a87467393d5bcb2bb7be8"
 
-    @pad = get_pad params[:id]
-    @title = ActionView::Base.full_sanitizer.sanitize(@pad[:text].split("<br>")[0])
+    @pads = get_list
+    
+    @pads
   end
   
   def show 
