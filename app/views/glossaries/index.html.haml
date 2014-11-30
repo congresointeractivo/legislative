@@ -15,9 +15,9 @@
 
     #p.nota{:style => "padding: 2em; border: 1px solid #ccc; background: #eee; margin: 2em;"}
       Nota: El texto de esta página es un esfuerzo colectivo. Si quiere hacer cambios, puede
-      %a{:href => @padediturl }
+      %a{:href => @pad[:edit_url] }
         editar la página
       \.
 
-    != @padtext
+    != @pad[:text]
 
