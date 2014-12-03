@@ -114,6 +114,7 @@ development:
   twitter_creator: ~ #twitter:creator
   twitter_image: ~ #twitter:image
   twitter_domain: ~ #twitter:domain
+  apikey: '2064063a3291c4a32b47e9c636649dea83d918ff6a9a87467393d5bcb2bb7be8'
 
 test:
   root_url:  ~
