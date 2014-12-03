@@ -99,6 +99,8 @@ GEM
       rails (>= 3.0)
       spreadsheet (>= 0.6)
     erubis (2.7.0)
+    etherpad-lite (0.3.0)
+      rest-client (>= 1.6)
     eventmachine (1.0.3)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -313,6 +315,7 @@ DEPENDENCIES
   coveralls
   devise!
   ekuseru
+  etherpad-lite
   factory_girl_rails
   faraday (= 0.8.1)
   fullcalendar-rails
