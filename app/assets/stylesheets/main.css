@@ -385,11 +385,14 @@ border: none;
 }
 
 #headersearch {
-  position: relative;
-  top: 2em;
-  left: -8em;
-  height: auto;
-  width: 20em;
+
+position: relative;
+top: 2em;
+height: auto;
+width: 20em;
+left: 6em;
+margin: 0;
+float: left;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
