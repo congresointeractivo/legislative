@@ -90,7 +90,7 @@ es-AR:
     initiative: 'Iniciativa: '
     creation_date_min: 'Fecha de ingreso (desde)'
     creation_date_max: 'Fecha de ingreso (hasta)'
-    initial_chamber: 'Cámara de origen'
+    initial_chamber: 'Origen'
     author: Autor
     placeholder_author: Ingresa el nombre de un autor
     placeholder_priority: Tipos de urgencia
@@ -123,14 +123,14 @@ es-AR:
     publish_date: Fecha de publicación
     chamber: Cámara
     source: Iniciativa
-    initial_chamber: Cámara de origen
+    initial_chamber: Origen
     current_priority: Urgencia actual
     sub_stage: Sub etapa
     status: Estado
     resulting_document: Ley
     law_link: Enlace a la ley
     merged_bills: Refundido
-    subject_areas: Comisiones (temáticas)
+    subject_areas: Comisiones
     authors: Autores
     paperworks: Eventos
     priorities: Urgencias
@@ -168,7 +168,7 @@ es-AR:
       intro: 'Nota: Estamos trabajando para mejorar las recomendaciones de incidencia, en la version beta NO SON CORRECTAS. Si querés ayudarnos a mejorar el texto o la detección del estado de la ley podés contactarnos. Las inciativas y los proyectos de ley cumplen un ciclo según las diferentes etapas del proceso parlamentario. Cada una de estas etapas nos ofrece diferentes formas de participación. '
       current_stage: 'Etapa actual:'
       incidence_recommendations: 'Recomendaciones de incidencia:'
-      see_all: Ver todas
+      see_all: Conozca más sobre el proceso legislativo
       Ingresado_description: El proyecto ha sido presentado pero aún no está en la agenda de la comisión.
       Ingresado: 'Si estamos trabajando en una iniciativa que ya se ha presentado y queremos promover que llegue a tratarse en una comisión, primero debemos saber en a qué comisiones se ha enviado el proyecto. Primero tiene que tratarse por la comisión de cabecera, y después por las demás (si las hay). El objetivo es que el presidente de la comisión cabecera ponga el proyecto en agenda.'      
       Rechazado_description: El proyecto fué votado y rechazado.
@@ -177,6 +177,8 @@ es-AR:
       Con dictámen en Cámara de Orígen: 'Cada comisión emite su versión del proyecto, llamada despacho. El mismo proceso de reuniones de asesores y tratamiento en comisiones se da en todas las comisiones a las que fue girado el proyecto. Una vez que estas han terminado, se emiten una o varias versiones del proyecto, llamadas dictámenes, los cual puede ser de mayoría (con acuerdo de todos o casi todos los legisladores que la integran) o de minoría (con uno o varios legisladores que los apoyan). Esto es importante, porque el tipo de dictamen determina la cantidad de votos que serán necesarios para aprobar el proyecto.'
       Con dictámen en Cámara Revisora_description: 'Los grupos especializados de la cámara revisora ya han trabajado y emitido sus recomendaciones.'
       Con dictámen en Cámara de Revisora: 'Cada comisión emite su versión del proyecto, llamada despacho. El mismo proceso de reuniones de asesores y tratamiento en comisiones se da en todas las comisiones a las que fue girado el proyecto. Una vez que estas han terminado, se emiten una o varias versiones del proyecto, llamadas dictámenes, los cual puede ser de mayoría (con acuerdo de todos o casi todos los legisladores que la integran) o de minoría (con uno o varios legisladores que los apoyan). Esto es importante, porque el tipo de dictamen determina la cantidad de votos que serán necesarios para aprobar el proyecto.'
+      Aprobado o sancionado: 'Una vez que ambas cámaras aprueban un proyecto de ley, se dice que está “sancionado” y termina su tránsito por el Poder Legislativo. Ahora sólo resta esperar que el Poder Ejecutivo lo promulgue, publicándolo en el boletín oficial. Para esto tiene 10 días hábiles desde la sanción. Esto sólo es válido para los proyectos de ley, ya que los proyectos de resolución y declaración sólo requieren aprobación en la cámara en la que fueron ingresados.'
+      Aprobado o sancionado_description: 'El proyecto fué votado y aprobado.'
   paperwork:
     chamber: 'Cámara:'
     created_at: 'Fecha de creación:'
