@@ -79,14 +79,14 @@
                       - v.votes.each do |voter|
                         %tr
                           %td
-                            - if voter.option.downcase == 'si'
+                            - if voter.option.downcase == 'afirmativo'
                               = voter.voter_id
                           %td
-                            - if voter.option.downcase == 'no'
+                            - if voter.option.downcase == 'negativo'
                               = voter.voter_id
                           %td
                             - if voter.option.downcase == 'abstencion'
                               = voter.voter_id
                           %td
-                            - if voter.option.downcase == 'pareo'
+                            - if voter.option.downcase == 'ausente'
                               = voter.voter_id
