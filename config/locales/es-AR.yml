@@ -157,9 +157,9 @@ es-AR:
     modal_revision: Comparados
     bill_subscribe: Suscríbase
     subscribe: Suscríbase a este proyecto
-    fb_share: Comparte
-    tw_share: Twittea
-    tw_text: Revisa el boletín %s en congresointeractivo.org
+    fb_share: Facebook
+    tw_share: Twitter
+    tw_text: Miren este proyecto de ley que me ha interesado (Exp. %s)
     breadcrumb_bill: Proyectos de ley
     download_project: Ver texto completo
     title: Proyectos de ley
