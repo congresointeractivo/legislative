@@ -8,8 +8,8 @@ require 'open-uri'
 
 
 
-class GlossariesController < ApplicationController
-  include GlossariesHelper 
+class TextsController < ApplicationController
+  include TextsHelper
   caches_page :index
   # GET /glossaries
   def index

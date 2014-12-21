@@ -1,4 +1,4 @@
-module GlossariesHelper
+module TextsHelper
 
   def get_pad padid = nil
     @pad = { id: params[:id] } 
