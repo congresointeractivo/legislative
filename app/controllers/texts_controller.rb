@@ -13,13 +13,19 @@ class TextsController < ApplicationController
   caches_page :index
   # GET /glossaries
   def index
-    @pads = get_list
+
+    @pads = get_list unless params[:id]
     @pads
   end
   
   def show 
-    index
+    @pad = get if params[:id]
+    index unless params[:id]
     render "index"
+  end
+
+  def get
+    get_pad params[:id]
   end
 
 end

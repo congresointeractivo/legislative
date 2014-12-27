@@ -2,15 +2,16 @@ module TextsHelper
 
   def get_pad padid = nil
     @pad = { id: params[:id] } 
-
-    ether = EtherpadLite.connect ENV['padurl'], ENV['apikey'], '1.2.1'
-    pad = ether.pad "metodologia"
     
-    @pad[:edit_url] = "#{ENV['padurl']}p/metodologia"
+    ether = EtherpadLite.connect ENV['pad_url'], ENV['pad_apikey'], '1.2.1'
+    pad = ether.pad @pad[:id]
+    
+    @pad[:edit_url] = "#{ENV['pad_url']}p/#{@pad[:id]}"
 
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
 
     @pad[:text] = markdown.render(pad.text)
+    
     @pad
   end
 	

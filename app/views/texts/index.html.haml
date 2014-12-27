@@ -13,8 +13,11 @@
       = #todo: localize
 
   %ul
-    - @pads.each do | pad |
-      %li
-        %a{:href => "/textos/"+pad[:id] }
-          = pad[:id]
+    - if @pads
+      - @pads.each do | pad |
+        %li
+          %a{:href => "/textos/"+pad[:id] }
+            = pad[:id]
+    - else
+      != @pad[:text]
 
