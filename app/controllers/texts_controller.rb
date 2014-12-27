@@ -20,8 +20,7 @@ class TextsController < ApplicationController
   
   def show 
     @pad = get if params[:id]
-    index unless params[:id]
-    render "index"
+    index
   end
 
   def get

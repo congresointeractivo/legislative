@@ -19,5 +19,5 @@
           %a{:href => "/textos/"+pad[:id] }
             = pad[:id]
     - else
-      != @pad[:text]
+      - render "texts/show"
 
