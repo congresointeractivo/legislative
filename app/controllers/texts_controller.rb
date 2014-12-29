@@ -15,12 +15,14 @@ class TextsController < ApplicationController
   def index
 
     @pads = get_list unless params[:id]
+    @title = t("texts.title") + " - "
     @pads
   end
   
   def show 
     @pad = get if params[:id]
-    index
+    @pad_title = format(params[:id])
+    @title = format(params[:id]) + " - "
   end
 
   def get

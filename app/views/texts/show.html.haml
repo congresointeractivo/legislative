@@ -4,14 +4,13 @@
       %li
         = link_to t('layout.home'), root_path
       %li
-        Textos 
-        = #todo: localize
+        = link_to t('texts.title'), texts_path
       %li.current
-        = @title
+        = @pad_title
 
   %div.page-header
     %h2
-      = @title
+      = @pad_title
 
     #p.nota{:style => "padding: 2em; border: 1px solid #ccc; background: #eee; margin: 2em;"}
       Nota: El texto de esta página es un esfuerzo colectivo. Si quiere hacer cambios, puede
