@@ -8,9 +8,12 @@ module TextsHelper
     
     @pad[:edit_url] = "#{ENV['pad_url']}p/#{@pad[:id]}"
 
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    pad.html.gsub!("&lt;!DOCTYPE HTML&gt;<html><body>","");
+    pad.html.gsub!("</body></html>","");
+    @pad[:text] = pad.html #markdown.render(pad.html)
 
-    @pad[:text] = markdown.render(pad.text)
+    #markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    #@pad[:text] = markdown.render(pad.html)
     
     @pad
   end
