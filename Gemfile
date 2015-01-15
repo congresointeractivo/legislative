@@ -10,6 +10,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git', :ref => '49ae
 
 # Database
 gem 'sqlite3'
+gem 'pg'
 
 # Template Engine
 gem 'haml', '~> 4.0.5'
