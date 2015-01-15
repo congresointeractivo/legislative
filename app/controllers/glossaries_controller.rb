@@ -1,3 +1,13 @@
+require 'json'
+require 'net/http'
+require 'redcarpet'
+require 'etherpad-lite'
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
+
+
+
 class GlossariesController < ApplicationController
   before_action :set_glossary, only: [:show, :edit, :update, :destroy]
 

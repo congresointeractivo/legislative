@@ -51,4 +51,3 @@ Legislative::Application.configure do
     :authentication => :plain
    }
 end
->>>>>>> master

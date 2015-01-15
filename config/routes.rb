@@ -25,6 +25,7 @@ Legislative::Application.routes.draw do
     resources :agendas
     resources :disclosures
     resources :glossaries
+    resources :texts
     resources :feedback
     resources :mains
     resources :searches

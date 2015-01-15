@@ -8,6 +8,7 @@ class MainsController < ApplicationController
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
     @new_bill_count = get_new_bill_count;
+    @new_laws_count = get_new_laws_count;
   
     if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank?
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
@@ -55,9 +56,20 @@ class MainsController < ApplicationController
       bills = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}", 'application/json')
       bills.total_entries
     rescue => e
-      "Algunos"
+      "-"
     end
   end
+
+  def get_new_laws_count
+    begin
+      laws = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}&project_type=LEY", 'application/json')
+      @last_update = Date.fromString(bills.last.date).strftime("%d-%m-%Y");
+      laws.total_entries;
+    rescue => e
+      "-"
+    end
+  end
+
 
   # GET the bills per agenda
   def get_bills_per_agenda bills_id

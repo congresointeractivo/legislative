@@ -1,0 +1,21 @@
+%div.container
+  %div
+    %ol.breadcrumb
+      %li
+        = link_to t('layout.home'), root_path
+      %li
+        = t("texts.title")
+
+  %div.page-header
+    %h2
+      = t("texts.title")
+
+  %ul{:style => "margin: 0; padding: 0"}
+    - if @pads
+      - @pads.each do | pad |
+        %li{:style => "list-style: none; width: 28%; font-size: 1.8em; text-align: center; border: 1px solid #ccc; float: left; margin: 1%; padding: 1%"}
+          %a{:href => "/textos/"+pad[:id] }
+            = pad[:id]
+    - else
+      - render "texts/show"
+

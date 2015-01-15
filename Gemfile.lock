@@ -117,6 +117,8 @@ GEM
       rails (>= 3.0)
       spreadsheet (>= 0.6)
     erubis (2.7.0)
+    etherpad-lite (0.3.0)
+      rest-client (>= 1.6)
     eventmachine (1.0.3)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -223,6 +225,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    redcarpet (3.2.0)
     ref (1.0.5)
     representable (1.5.3)
       multi_json
@@ -337,6 +340,7 @@ DEPENDENCIES
   coveralls
   devise!
   ekuseru
+  etherpad-lite
   factory_girl_rails
   faraday (= 0.8.1)
   fullcalendar-rails
@@ -360,6 +364,7 @@ DEPENDENCIES
   rails (= 4.1.4)
   rails-i18n (~> 4.0.2)
   rake (= 10.1.1)
+  redcarpet
   rmagick
   roar (= 0.11.19)
   roar-rails (= 0.1.0)

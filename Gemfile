@@ -104,3 +104,7 @@ gem 'httparty'
 gem 'json'
 gem 'protected_attributes'
 gem 'rake', '10.1.1'
+
+gem 'redcarpet'
+
+gem 'etherpad-lite'
