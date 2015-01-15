@@ -70,8 +70,8 @@ Legislative::Application.configure do
 
   config.eager_load = true
 
-  # Send mails to Cuttlefish (see http://cuttlefish.io)
-  config.action_mailer.delivery_method = :smtp
+  # Send congreso interactivo mails to Cuttlefish (see http://cuttlefish.io)
+  config.action_mailer.delivery_method = :sendmail
   config.action_mailer.smtp_settings = {
     :address => ENV['smtp_setting_address'],
     :port => 2525,
