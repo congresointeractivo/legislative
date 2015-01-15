@@ -1,6 +1,16 @@
 = render :partial => "bill_header"
 
 %div.container
+  - if !@tags.blank?
+    %div.alert.alert-warning{'style' => 'margin-top: 10px; padding: 8px 5px;'}
+      %p
+        %i.fa.fa-comment.fa-2x
+        = t('bill.citizen_article_related_a')
+        %a{'href' => monologue_path + '/tags/' + @bill.uid, 'target' => '_blank', 'style' => 'text-decoration: underline;' }
+          = t('bill.citizen_article_related_b')
+        = t('bill.citizen_article_related_c')
+
+
   %div
     - flash.each do |name, msg|
       %div.alert.alert-info
@@ -41,8 +51,8 @@
           %button.up{'onclick'=>"ga('send','click','mobile_less_recent')"}
             %i.fa.fa-chevron-circle-up
             = t('bill.less_recents')
-      
-        
+
+
     %div.modal.fade#Documents{'tabindex'=>'-1', 'role'=>'dialog', 'aria-labelledby'=>'myModalLabel', 'aria-hidden'=>'true'}
       %div.modal-dialog.modal-lg
         %div.modal-content
@@ -50,13 +60,13 @@
             %button.close{'type'=>'button', 'data-dismiss'=>'modal', 'aria-hidden'=>'true'}
               &times;
             %h4.modal-title#myModalLabel
-              = t('bill.modal_bulletin_number') 
+              = t('bill.modal_bulletin_number')
               = @bill.uid
           %div.modal-body
 
             - if ! @bill.reports.blank?
               %h5
-                = t('bill.modal_reports') 
+                = t('bill.modal_reports')
               %table.table.table-striped
                 %tr
                   %th
@@ -72,10 +82,10 @@
                       %td
                         %a{'href'=>rep.link}
                           = rep.step
-                      
+
             - if ! @bill.documents.blank?
               %h5
-                = t('bill.modal_documents') 
+                = t('bill.modal_documents')
               %table.table.table-striped
                 %tr
                   %th
@@ -91,7 +101,7 @@
                       %td
                         %a{'href'=>doc.link}
                           = doc.step
-            
+
             - if ! @bill.directives.blank?
               %h5
                 = t('bill.modal_directives')
@@ -110,7 +120,7 @@
                       %td
                         %a{'href'=>dir.link}
                           = dir.step
-            
+
             - if ! @bill.revisions.blank?
               %h5
                 = t('bill.modal_revision')
@@ -128,7 +138,7 @@
     %div#timeline.row
       = render :partial => "paperwork", collection: @bill.paperworks
       = render :partial => "motion", collection: @bill.motions
-      
+
 
   :javascript
     $('.up').on('click', function(e){
@@ -165,3 +175,56 @@
   = link_to (url_for :controller => 'glossaries', :action=>'index') do
     =t('bill.incidence.see_all')
 
+
+    var principal = '';
+    function findNames(term, replacement) {
+      principal = document.getElementById('timeline');
+      var match = new RegExp(term, "ig");
+
+      for ( x = 0; x < principal.children.length; x++ ) 
+      { 
+        if( principal.children[x].hasChildNodes() ) 
+        { 
+          var replaced = "";
+          
+          for ( x = 0; x < principal.children.length; x++ ) 
+          { 
+            if( principal.children[x].hasChildNodes() ) 
+            {
+              var match = new RegExp(term, "ig");
+
+              var children_title = principal.children[x].children[1].children[0];
+              var children_content = principal.children[x].children[1].children[2];
+              
+              if( children_title.children.length == 0 )
+              {              
+                var nvo_value = children_title.textContent.replace(match, replacement);
+                children_title.innerHTML = nvo_value;
+              }
+
+              if( children_content.children.length == 0 )
+              {              
+                var nvo_value = children_content.textContent.replace(match, replacement);
+                children_content.innerHTML = nvo_value;
+              }
+              
+            }
+          }
+          
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var glossaries = #{@dictionary};
+
+        var elementos = Object.keys(glossaries).length;
+        for(var x=0; x<elementos; x++)
+        {
+          var c_term = glossaries[x].term;
+          var c_definition = glossaries[x].definition;
+
+          findNames(c_term, '<a href="#" data-toggle="tooltip" data-placement="top" title="'+c_definition+'">'+c_term+'</a>');
+        }
+        $('[data-toggle="tooltip"]').tooltip();
+    });

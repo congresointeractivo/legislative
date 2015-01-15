@@ -44,12 +44,11 @@ Legislative::Application.configure do
   # Send congreso interactivo mails to Cuttlefish (see http://cuttlefish.io)
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => "50.116.29.205",
+    :address => ENV['smtp_setting_address'],
     :port => 2525,
-    :user_name => "congreso_interactivo_2",
-    :password => "pnmTy0PpU0HA7EO6a6N8",
+    :user_name => ENV['smtp_setting_username'],
+    :password => ENV['smtp_setting_password'],
     :authentication => :plain
    }
-
-
 end
+>>>>>>> master

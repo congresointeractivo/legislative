@@ -18,11 +18,23 @@ class BillsController < ApplicationController
 
   # GET /bills/1
   def show
+    @dictionary = Array.new
+    glossaries = Glossary.order("term").where(searchable: true)
+    glossaries.each do |word|
+      new_word = Hash.new
+      new_word['term'] = word.term
+      new_word['definition'] = word.definition
+      @dictionary << new_word
+    end
+    @dictionary = @dictionary.to_json
+
     if !ENV['billit_url'].blank?
       @bill = Billit::Bill.get(ENV['billit_url'] + "#{params[:id]}.json", 'application/json')
       if !@bill.blank? and !@bill.title.blank?
         # THE FOLLOWING HAS NOT BEEN TESTED SO IT WILL BE COMMENTED
-        #p @bill
+
+        @tags = Monologue::Tag.where("lower(name) = ?", @bill.uid.mb_chars.to_s.downcase).first
+
         # paperworks
         @date_freq = Array.new
         bill_range_dates = @bill.paperworks.map do |paperwork|
@@ -123,7 +135,7 @@ class BillsController < ApplicationController
     if !ENV['billit_url'].blank?
       if !params.nil? && params.length > 3
         #case with predefined queries selected
-        if params['predefined_queries'] != nil
+        if !params['predefined_queries'].blank?
           @keywords = params['predefined_queries'] + '&'
           params.each do |key, value|
             if key != 'utf8' && key != 'locale' && key != 'action' && key != 'controller' && !(value.is_a? Array) && !value.blank? && key != 'predefined_queries' && key != 'creation_date_min' && key != 'creation_date_max'
