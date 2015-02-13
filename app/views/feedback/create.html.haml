@@ -1,2 +1,5 @@
-<h2>Hemos recibido su mensaje.</h2><h3>El equipo de Congreso Interactivo lo revisará.</h2>
-= @feedback
+- if @feedback != "ERROR"
+	<h2>Hemos recibido su mensaje.</h2><h3>El equipo de Congreso Interactivo lo revisará.</h2>
+	= @feedback
+- else
+	<h2>Error, el mensaje no se ha enviado</h2>
