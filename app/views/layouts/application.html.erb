@@ -162,12 +162,11 @@
       <div class="row">
         <div class="col-md-7">
           <form accept-charset="UTF-8" action="/feedback" class="form-inline" method="post">
-            <label class='label-survey'>
+            <label class='label-survey col-md-7'>
               <%= t('layout.feedback') %>
             </label>
-            <textarea class="input-xlarge" id="feedback_message" name="feedback_message" placeholder="<%= t('layout.feedback_placeholder') %>" rel="feedback-field">
-            </textarea>
-            <input class="btn btn-info hide" id="feedback-submit" name="commit" type="submit" value="Enviar" />
+            <textarea class="col-md-5" id="feedback_message" name="feedback_message" placeholder="<%= t('layout.feedback_placeholder') %>" rel="feedback-field"></textarea>
+            <input class="btn btn-info col-md-offset-7" id="feedback-submit" name="commit" type="submit" value="Enviar" />
           </form>
         </div>
         <script type="text/javascript">
