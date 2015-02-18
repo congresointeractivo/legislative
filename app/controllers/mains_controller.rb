@@ -8,7 +8,7 @@ class MainsController < ApplicationController
     @low_chamber_agenda = Array.new
     @high_chamber_agenda = Array.new
     @new_bill_count = get_new_bill_count;
-    @new_laws_count = get_new_laws_count;
+    # @new_laws_count = get_new_laws_count;
   
     if !ENV['component_legislative_agendas'].blank? and !ENV['agendas_url'].blank? and !ENV['billit_url'].blank?
 	    @low_chamber_agenda[0] = get_current_chamber_agenda ENV['low_chamber_name']
