@@ -1,8 +1,9 @@
-/* ---- header disclaimer ---- */
+/* ---- footer disclaimer ---- */
 .disclaimer {
-  background-color: #D0021B;
-  color: #FFF;
-  padding: 5px;
+  background-color: #ffc;
+  color: #333;
+  padding: 2em;
+  margin-bottom: 2em;
 }
 .disclaimer p {
   margin-bottom: 0;
@@ -14,6 +15,11 @@
 }
 
 
+.feedback {
+  clear:both; 
+  margin-top: 3px;
+  margin-left: 2em;
+}
 
 /* ---- form ---- */
 .chosen-container-multi .chosen-choices {

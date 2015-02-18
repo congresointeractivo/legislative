@@ -42,15 +42,15 @@ h5 {
 }
 
 a {
-  color: #f4a458;
+  color: #EE9C2C;
 }
 
 a:hover {
-  color: #dd8740;
+  color: #FDBB61;
 }
 
 a:visited {
-  color: #ce7a3c;
+  color: #D6AE77;
 }
 
 a.btn:visited {
@@ -360,7 +360,7 @@ label {
 	margin-top: 1em;	
 	font-size: 20px;
 	border-left: 1px dotted #bbb;
-	padding-right: 0.25em;
+	padding-right: 0.05em;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 

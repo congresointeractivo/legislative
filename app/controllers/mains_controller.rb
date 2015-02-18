@@ -51,22 +51,27 @@ class MainsController < ApplicationController
   end
 
   def get_new_bill_count
-    @date_bills = Date.today().prev_month(1).strftime("%d-%m-%Y");
-    begin
-      bills = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}", 'application/json')
-      bills.total_entries
-    rescue => e
-      "-"
-    end
+    bills = Billit::BillPage.new;
+    processing_date = Date.today();
+    # begin
+      while (!bills.total_entries or bills.total_entries == 0) do
+        processing_date = processing_date.prev_month(1);
+        @date_bills = processing_date.strftime("%d-%m-%Y");
+        bills = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}", 'application/json')
+      end
+      @last_update = Date.parse(bills.bills.last.creation_date).strftime("%d-%m-%Y");
+      return bills.total_entries
+    # rescue => e
+    #   "-"
+    # end
   end
 
   def get_new_laws_count
     begin
       laws = Billit::BillPage.get(ENV['billit_url'] + "search/?creation_date_min=#{@date_bills}&project_type=LEY", 'application/json')
-      @last_update = Date.fromString(bills.last.date).strftime("%d-%m-%Y");
       laws.total_entries;
     rescue => e
-      "-"
+      "0"
     end
   end
 

@@ -95,15 +95,6 @@
 
   <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="//browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <div class="navbar navbar-inverse" role="navigation">
-    <div class="disclaimer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p><b>Nota de la versión beta:</b> Temporalmente la información está incompleta y no se recomienda utilizarla para realizar análisis.</p>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -126,6 +117,7 @@
             <li><%= link_to t('layout.study'), monologue_path %><li/>
           <% end %>
           <li><%= link_to t('layout.texts'), texts_path %><li/>
+          <li><%= link_to t('layout.blog'), "http://blog.congresointeractivo.org" %><li/>
         </ul>
 
         <div class="container" id="headersearch">
@@ -162,34 +154,40 @@
   <!-- End content -->
 
 
-  <div class="feedback" style="margin-top: -150px; clear:both; margin-top: 100px;">
-  <form accept-charset="UTF-8" action="/feedback" class="form-inline" method="post">
-  <label class='label-survey'>
-    ¿Cómo podemos hacer esta página mejor para vos?
-  </label>
-  <textarea class="input-xlarge" id="feedback_message" name="feedback_message" placeholder="Tus sugerencias e ideas nos ayudan a mejorar" rel="feedback-field">
-  </textarea>
-  <input class="btn btn-info hide" id="feedback-submit" name="commit" type="submit" value="Enviar" />
-  </form>
-  </div>
-  <script type="text/javascript">
-  $("#feedback_message").on("focus",function() {
-    $("#feedback-submit").removeClass("hide");
-  })
-  </script>
-
   <div class="arregloFotter"></div>
 
   <!-- Footer -->
   <div id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-            <ul>
-                <li><a href="https://github.com/congresointeractivo/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a></li>
-            </ul>
+        <div class="col-md-7">
+          <form accept-charset="UTF-8" action="/feedback" class="form-inline" method="post">
+            <label class='label-survey'>
+              <%= t('layout.feedback') %>
+            </label>
+            <textarea class="input-xlarge" id="feedback_message" name="feedback_message" placeholder="<%= t('layout.feedback_placeholder') %>" rel="feedback-field">
+            </textarea>
+            <input class="btn btn-info hide" id="feedback-submit" name="commit" type="submit" value="Enviar" />
+          </form>
         </div>
-	<div class="col-md-4" style="text-align: right; margin-bottom: 1em;"><strong>Argentina</strong></div>
+        <script type="text/javascript">
+          $("#feedback_message").on("focus",function() {
+            $("#feedback-submit").removeClass("hide");
+          })
+        </script>
+        <div class="col-md-5 disclaimer">
+          <p>
+            <b><%= t('layout.disclaimer_title') %></b> 
+            <%= t('layout.disclaimer') %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8">
+            <a href="https://github.com/congresointeractivo/legislative" target="_blank"><i class="fa fa-github-alt"></i> Revisa nuestro código en Github</a>
+        </div>
+      	<div class="col-md-4" style="text-align: right; margin-bottom: 1em;"><strong>Argentina</strong></div>
       </div>
     </div>
   </div>

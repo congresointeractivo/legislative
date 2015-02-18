@@ -4,7 +4,8 @@
 es-AR:
   layout:
     about_us: Acerca de nosotros
-    bills: Proyectos de ley
+    bills: Proyectos
+    blog: Blog
     communication: Preguntas
     congressmen: Legisladores
     disclosure: Declaraciones
@@ -17,6 +18,10 @@ es-AR:
     tables: Tablas
     title_project: Congreso Interactivo
     welcome: Bienvenido(a)
+    feedback: "¿Cómo podemos hacer esta página mejor para vos?"
+    feedback_placeholder: "Tus sugerencias e ideas nos ayudan a mejorar."
+    disclaimer_title: "Nota:"
+    disclaimer: "Es posible que en algunos casos este sitio presente información incorrecta. En caso de encontrar un error, por favor infórmenos."
   main:
     search_placeholder: Ingresa tu busqueda
     username: Nombre de usuario
@@ -51,9 +56,9 @@ es-AR:
 
 
     legisladores_title: LEGISLADORES
-    legisladores_copy: Los legisladores son los representantes del pueblo en el Congreso Nacional. Sus funciones principales son las de proponer leyes y modificaciones a las ya existentes para mejorar la calidad de vida de todos los ciudadanos.
+    legisladores_copy: Los legisladores son los representantes del pueblo argentino en el Congreso Nacional. Sus funciones principales son las de proponer leyes y modificaciones a las ya existentes para mejorar la calidad de vida de todos los ciudadanos.
     legisladores_low_chamber_number: 257 diputados
-    legisladores_low_chamber_copy: 150.000 personas representadas por cada uno (varía por provincia).
+    legisladores_low_chamber_copy: Representan 150.000 personas (varía por prov.)
     legisladores_low_chamber_cta: Conocé a tus diputados
     legisladores_high_chamber_number: 72 senadores
     legisladores_high_chamber_copy: Cada provincia tiene 3 representantes.
@@ -63,6 +68,9 @@ es-AR:
     proyectos_copy: Los proyectos de ley son textos que proponen una nueva legislación o modificaciones a las leyes existentes. Por lo general son elaborados por los legisladores, aunque el Poder Ejecutivo puede presentar sus proyectos, así como también la ciudadanía mediante la iniciativa popular.
     proyectos_cta: ver todos los proyectos 
     proyects_new: Presentados desde %{bills_date}
+
+    new_laws: "son proyectos de ley. "
+    last_update: "Última actualización: %{last_update}"
 
 
 
