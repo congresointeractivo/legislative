@@ -840,7 +840,6 @@ h4 span.nostyle {
 /* Footer */
 
 #footer {
-  position: absolute;
   width: 100%;
   /* Set the fixed height of the footer here */
   /*height: 70px;*/
@@ -922,13 +921,6 @@ h4 span.nostyle {
   .btn-lg {
     height: 50px;
     padding: 10px 16px;
-  }
-  #footer {
-    bottom: 0px;
-    min-height: 150px;
-  }
-  .arregloFotter {
-    height: 110px;
   }
 }
 

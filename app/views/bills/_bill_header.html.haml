@@ -79,6 +79,10 @@
             %span.light
               = t('bill.abstract') + ":"
             = @bill.abstract
+          -if !@bill.project_type.blank?
+            %span.light
+              = t('bill.project_type') + ":"
+            = @bill.project_type
         %p
           -if !@authors.blank?
             %span.light
