@@ -7,3 +7,7 @@ User-Agent: *
 Disallow: /suscripcion/
 Disallow: /usuarios/
 Disallow: /*.xls
+Crawl-Delay: 10
+
+User-Agent: AhrefsBot 
+Crawl-Delay: 10
