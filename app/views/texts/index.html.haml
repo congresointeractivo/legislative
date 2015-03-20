@@ -15,7 +15,7 @@
       - @pads.each do | pad |
         %li{:style => "list-style: none; width: 28%; font-size: 1.8em; text-align: center; border: 1px solid #ccc; float: left; margin: 1%; padding: 1%"}
           %a{:href => "/textos/"+pad[:id] }
-            = pad[:id]
+            = pad[:name]
     - else
       - render "texts/show"
 

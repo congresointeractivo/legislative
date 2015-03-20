@@ -22,13 +22,14 @@ module TextsHelper
    page = Nokogiri::HTML open "#{ENV['pad_url']}list"
    links = page.css "a"
 
-   ether = EtherpadLite.connect ENV['pad_url'], ENV['pad_apikey'], '1.2.1'
-   pad_text = ""
+   #ether = EtherpadLite.connect ENV['pad_url'], ENV['pad_apikey'], '1.2.1'
+   #return ether.groups
+  # pad_text = ""
    pads = []
    links.sort_by { |f| f.text.downcase }.each do | link |
-      excluded_pads = ['1OWQzCS7Ze', 'camilo', 'exSJB9uB71', 'link.text', 'my_first_etherpad_lite_pad', 'pads.html', 'pads', 'prueba_etherpad_ruby', 'test', 'AccionesPostMinka', 'Marco_civil_internet']
+      excluded_pads = ['1OWQzCS7Ze', 'camilo', 'exSJB9uB71', 'link.text', 'my_first_etherpad_lite_pad', 'pads.html', 'pads', 'prueba_etherpad_ruby', 'test', 'AccionesPostMinka', 'Marco_civil_internet', 'http&', 'https&', 'Conocimiento_abierto', 'Gobierno_abierto', 'Grupo_opendata', 'Proceso_legislativo', 'Project_log', 'Teoria_del_cambio', 'Voto_electronico', 'Conocimiento_abierto2']
       unless excluded_pads.include?(link.text) or link.text.chr == "_"
-        pads << {id: format(link.text), edit_url: "#{ENV['pad_url']}p/#{link.text}"}
+        pads << {name: format(link.text), id: link.text, edit_url: "#{ENV['pad_url']}p/#{link.text}"}
       end
    end
    pads
