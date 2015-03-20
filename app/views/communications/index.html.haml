@@ -59,6 +59,9 @@
                       %i.fa.fa-envelope-o
 
               %div.col-md-9.message-box-right.tituloFormulario
+                %div.hidden
+                  =text_field_tag :hpt, nil, :class=> "form-control"
+                  =text_field_tag :hpt2, nil, :class=> "form-control", :value=> "hpt"
                 %h5
                   = t('communication.writte_message')
 

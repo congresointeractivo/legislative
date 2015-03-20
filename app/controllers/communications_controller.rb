@@ -24,7 +24,7 @@ class CommunicationsController < ApplicationController
   end
 
   def create
-    if !params[:recipients].blank? and !params[:author_email].blank? and valid_email params[:author_email]
+    if !params[:recipients].blank? and !params[:author_email].blank? and valid_email params[:author_email] and nobot params[:hpt] and nobot2 params[:hpt2]
       set_current_instance
     	@message = Message.new
       @message.writeitinstance = @writeitinstance
@@ -41,6 +41,18 @@ class CommunicationsController < ApplicationController
     else
       redirect_to communications_url, :notice => sprintf(t('communication.confirmation_mail_sent_fail'),params[:author_email])
     end
+  end
+
+  def nobot hpt_field
+    if hpt_field.length > 0
+      return false;
+    else
+      return true;
+    end
+  end
+
+  def nobot2 hpt_field
+   return (hpt_field == "hpt")
   end
 
   def per_person
