@@ -14,7 +14,7 @@
 </title>
     <meta name="description" content="<%= ENV['description'] %>">
     <meta name="keywords" content="<%= ENV['keywords'] %>">
-    <meta name="og:image" content="<%= asset_path('//www.congresointeractivo.org/img/logo.png') %>">
+    <meta name="og:image" content="<%= asset_path('//blog.congresointeractivo.org/img/logo.png') %>">
     <meta name="og:title" content="<%= @title %><%= Legislative::Application.config.application_name %>">
     <meta name="og:description" content="<%= ENV['og_description'] %>">
 
@@ -67,7 +67,7 @@
     <%= stylesheet_link_tag '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css' %>
     <%= stylesheet_link_tag 'application' %>
 
-    <%= favicon_link_tag 'http://www.congresointeractivo.org/favicon.ico' %>
+    <%= favicon_link_tag 'http://blog.congresointeractivo.org/favicon.ico' %>
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script>window.jQuery || document.write('<script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"><\/script>')</script>
@@ -104,7 +104,7 @@
           <span class="text-bar"><%= t('layout.menu') %></span>
         </button>
         <div id='site-logo'>
-          <a href="<%=root_path%>"><%= image_tag "http://www.congresointeractivo.org/img/logo.png", alt:t('layout.title_project') %></a>
+          <a href="<%=root_path%>"><%= image_tag "http://blog.congresointeractivo.org/img/logo.png", alt:t('layout.title_project') %></a>
           <div id="defci"><%= t('layout.from') %> <span id="beta">BETA</span></div>
         </div>
       </div>
