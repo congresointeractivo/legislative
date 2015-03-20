@@ -9,12 +9,15 @@ class FeedbackController < ApplicationController
       return false;
     end
 
-    @feedback = params[:feedback_message] 
-    @feedback = @feedback + " \n Referer: " + request.env["HTTP_REFERER"]
-    @feedback = @feedback + " \n IP: " + request.env["REMOTE_ADDR"]
-    @feedback = @feedback + " \n Date: " + Time.now.to_s
+    if (params[:feedback_message] != "")
 
-    sent = FeedbackMailer.feedback_email(@feedback).deliver
+      @feedback = params[:feedback_message] 
+      @feedback = @feedback + " \n Referer: " + request.env["HTTP_REFERER"]
+      @feedback = @feedback + " \n IP: " + request.env["REMOTE_ADDR"]
+      @feedback = @feedback + " \n Date: " + Time.now.to_s
+
+      sent = FeedbackMailer.feedback_email(@feedback).deliver
+    end
     if (!sent)
       @feedback = "ERROR";
     end
